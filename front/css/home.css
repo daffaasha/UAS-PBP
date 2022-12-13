@@ -1,0 +1,44 @@
+.nav-prop {
+    background-color: #4A97FE;
+}
+
+.brand-logo {
+    margin-left: 30px;
+}
+
+.icon-prop {
+    color: white;
+    margin-right: 10px;
+}
+
+.search-container {
+    width: 95%;
+    margin: auto;
+    margin-top: 3vh;
+}
+
+.input-container {
+    height: 35px;
+}
+
+.login-input {
+    /* border-radius: 20%; */
+    border-color: #37547B;
+    border-left-color: white;
+    /* border: none; */
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.login-span {
+    background-color: white;
+    border-color: #37547B;
+}
+
+.icon-color {
+    color: #37547B;
+}
+
+.form-control:focus {
+    border-color: #37547B;
+} 
