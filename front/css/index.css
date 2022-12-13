@@ -1,0 +1,49 @@
+.input-container-uni {
+    width: 35%;
+    margin: auto;
+}
+
+.input-container {
+    height: 50px;
+}
+
+.login-input {
+    /* border-radius: 20%; */
+    /* border-color: #4A97FE; */
+    border: none;
+    outline: none;
+    margin-bottom: 12px;
+}
+
+.login-input:focus {
+}
+
+.login-span {
+    background-color: white;
+}
+
+.icon-color {
+    color: #4A97FE;
+}
+
+.btn-submit {
+    background-color: #4A97FE;
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+
+    color: #FFFFFF;
+    border: none;
+    width: 70%;
+    margin: auto;
+}
+
+.img-logo {
+    border-radius: 8%;
+    width: 24%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 20vh;
+}
+
