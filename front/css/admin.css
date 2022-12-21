@@ -1,0 +1,81 @@
+/* set font-familiy */
+*{
+    font-family: 'Inter', sans-serif;
+    /* reset padding and margin for all elements */
+    padding: 0;
+    margin: 0;
+}
+main{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    background-color: rgba(74, 151, 254, 1);
+    width: 380px;
+    padding: 24px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.content{
+    background-color: #EEEEEE;
+    flex-grow: 1;
+}
+
+.siderbar .description{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23.5294px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.sidebar a{
+    text-decoration: none;
+}
+
+.sidebar .header-bar .list-item{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    height: 90px;
+    box-sizing: border-box;
+}
+
+.sidebar .header-bar .list-item .icon{
+    margin-right: 24px;
+}
+
+.sidebar .main-sidebar .list-item .description{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23.5294px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+.sidebar .main-sidebar .list-item .icon{
+    margin-right: 24px;
+}
+
+.sidebar .main-sidebar .list-item a{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    height: 90px;
+    box-sizing: border-box;
+}
+
+.sidebar .main-sidebar .list-item a:hover{
+    background-color: #EEEEEE;
+    color:rgba(74, 151, 254, 1);
+}
+.sidebar .main-sidebar .list-item a .description:hover{
+    background-color: #EEEEEE;
+    color:rgba(74, 151, 254, 1);
+}
