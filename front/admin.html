@@ -23,32 +23,59 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="img/logo.png" alt="">
-                <img src="img/petstar.png" alt="">
+                <img src="img/logo.png" alt="" class="logo-kotak" width="25%">
+                <img src="img/petstar.png" alt="" width="50%">
             </div>
             <div class="menu">
-                <ul>
-                    <li><a href="#">Image user</a></li>
-                    <li><a href="#">setting</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
+                <a href="#"><img src="img/user.svg" alt="nama-user" width="75%"></a>
+                <a href="#"><img src="img/setting.svg" alt="setting" width="75%"></a>
+                <a href="#" class="logout">Logout</a>
         </nav>
     </header>
     <main>
         <div class="container">
             <h1>Data Admin</h1>
-            <button type="submit">Tambah Admin</button>
+            <button type="submit" class="add">+ Tambah Admin</button>
         </div>
-        <form action="">
-            <tr>
-                <th>No</th>
-                <th>Nama</th>
-                <th>Username</th>
-                <th>Password</th>
-                <th rowspan="1">Aksi</th>
-                <th></th>
-            </tr>
-        </form>
+        <div class="container">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th colspan="2">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active-row">
+                        <td>1</td>
+                        <td>zulfan</td>
+                        <td>ganteng</td>
+                        <td>uhuyyy</td>
+                        <td><button>Edit</button></td>
+                        <td><button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>zulfan</td>
+                        <td>ganteng</td>
+                        <td>uhuyyy</td>
+                        <td>edit</td>
+                        <td>delete</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>zulfan</td>
+                        <td>ganteng</td>
+                        <td>uhuyyy</td>
+                        <td>edit</td>
+                        <td>delete</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
   </body>
 </html>

@@ -53,3 +53,110 @@ table {
 *{
     font-family: 'Inter', sans-serif;
 }
+
+nav{
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+    /* background-color:cornsilk; */
+    box-sizing: border-box;
+    border-bottom:1px solid #EEEEEE;
+    /* border-radius: 24px; */
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+nav .logo-kotak{
+     margin-right: 18px;
+}
+
+nav .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav .menu a{
+    text-decoration: none;
+    padding: 12px 16px;
+    font-family: 'Inter', sans-serif ;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(74, 151, 254, 1);
+}
+
+main{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* BUTTON TAMBAH ADMIN */
+
+.container button.add{
+    border: none;
+    padding: 12px 24px;
+    background-color:rgba(74, 151, 254, 1) ;
+    border-radius: 16px;
+    color: white;
+    font-weight: 500;
+    transition: all ease-in .2s;
+}
+
+.container button.add:hover{
+    background-color: #EEEEEE;
+    color: rgba(74, 151, 254, 1);
+    transition: all ease-in .2s;
+}
+
+/* CSS FOR TABLE */
+
+.content-table{
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr{
+    background-color: rgba(74, 151, 254, 1);
+    color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+}
+
+.content-table th,
+.content-table td{
+    padding: 12px 15px;
+}
+
+.content-table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid rgba(74, 151, 254, 1);
+}
+
+.content-table tbody tr.active-row{
+    font-weight: 600;
+    color: rgba(74, 151, 254, 1);
+}
