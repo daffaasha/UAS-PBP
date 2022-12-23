@@ -1,3 +1,12 @@
+<?php
+
+    include "koneksi.php";
+
+    $query = mysqli_query($koneksi, "SELECT * FROM `tabel_user` WHERE `LEVEL` LIKE 'pegawai' " );
+    $admin = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,6 +29,15 @@
     />
   </head>
   <body>
+  <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['LEVEL']==""){
+		header("location:index.php?pesan=gagal");
+	}
+ 
+	?>
     <header>
         <nav>
             <div class="logo">
@@ -34,8 +52,8 @@
     </header>
     <main>
         <div class="container">
-            <h1>Data Admin</h1>
-            <button type="submit" class="add">+ Tambah Admin</button>
+            <h1>Data User</h1>
+            <button type="submit" class="add">+ Tambah User</button>
         </div>
         <div class="container">
             <table class="content-table">
@@ -49,7 +67,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="active-row">
+                <?php foreach($admin as $a) : ?>
+                <tr class="active-row" >
+                    <td><?php echo $a["ID_USER"]; ?></td>
+                    <td><?php echo $a["NAMA"];?></td>
+                    <td><?php echo $a["USERNAME"]; ?></td>
+                    <td><?php echo $a["PASSWORD"];?></td>
+                    <td>
+                        <a class = "btn1" href="ubah.php?ID_USER=<?php echo $a['ID_USER']; ?>">Ubah</a> 
+                        | 
+                        <a class = "btn" href="hapus.php?ID_USER=<?php echo $a['ID_USER']; ?>">Hapus</a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                    <!-- <tr class="active-row">
                         <td>1</td>
                         <td>zulfan</td>
                         <td>ganteng</td>
@@ -72,7 +103,7 @@
                         <td>uhuyyy</td>
                         <td>edit</td>
                         <td>delete</td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
