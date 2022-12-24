@@ -50,6 +50,7 @@ table {
 /* CSS RESET */
 
 /* set font  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 *{
     font-family: 'Inter', sans-serif;
 }
@@ -57,7 +58,7 @@ table {
 nav{
     display: flex;
     flex-direction: row;
-    padding: 16px;
+    padding: 0 16px;
     background-color:rgba(74, 151, 254, 1);
     box-sizing: border-box;
     border-bottom:1px solid #EEEEEE;
@@ -92,6 +93,21 @@ nav .menu img{
     margin-right: 8px;
 }
 
+/* dropdown logout */
+
+nav .menu ul.dropdown {
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    overflow: hidden;
+    background-color: #37547B;
+    /* text-align: center; */
+}
+nav .menu:hover ul.dropdown{
+    display: block;
+}
+
 main{
     display: flex;
     min-height: 100vh;
@@ -105,14 +121,14 @@ main{
     padding: 24px;
     box-sizing: border-box;
     align-items: center;
-    background-color: #E6F6FF;
+    /* background-color: #E6F6FF; */
     width: 80%;
     border-radius: 24px;
     margin-top: 32px;
 }
 
 .container h1{
-    font-size: large;
+    font-size: 50px;
     font-weight: 700;
     margin-bottom: 24px;
     color: #37547B;
@@ -132,9 +148,14 @@ main{
 }
 
 .container button.add:hover{
-    background-color: #EEEEEE;
+    background-color: white;
     color: rgba(74, 151, 254, 1);
     transition: all ease-in .2s;
+}
+.container button.add:active{
+    background-color: rgba(74, 151, 254, 1);
+    color: white;
+    transition: all ease-in .1s;
 }
 
 /* CSS FOR TABLE */
@@ -151,13 +172,33 @@ main{
 .content-table thead tr{
     background-color: rgba(74, 151, 254, 1);
     color: #ffffff;
-    text-align: center;
     font-weight: 600;
 }
 
 .content-table th,
 .content-table td{
     padding: 12px 15px;
+    border-top: 8px solid #E6F6FF;
+    background-color: white;
+    color: rgba(55, 84, 123, 1);
+    vertical-align: middle;
+    text-align: center;
+}
+
+.content-table th{
+    border: none;
+    background-color: #E6F6FF;
+}
+
+.content-table td{
+    font-weight: 300;
+}
+
+.content-table .first{
+    border-left: 8px solid #E6F6FF;
+}
+.content-table .end{
+    border-right: 8px solid #E6F6FF;
 }
 
 .content-table tbody tr{
@@ -169,10 +210,12 @@ main{
 }
 
 .content-table tbody tr:last-of-type{
-    border-bottom: 2px solid rgba(74, 151, 254, 1);
+    border-bottom: 20px solid #E6F6FF;
+    border-radius: 5px 5px 0 0;
 }
 
-.content-table tbody tr.active-row{
+/* jika ada table yang aktive (diklik) warnanya jadi gini, dikasih  class (active-row) */
+/* .content-table tbody tr.active-row{
     font-weight: 600;
     color: rgba(74, 151, 254, 1);
-}
+} */
