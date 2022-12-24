@@ -23,7 +23,7 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="img/logo.png" alt="" class="logo-kotak" width="25%">
+                <!-- <img src="img/logo.png" alt="" class="logo-kotak" width="25%"> -->
                 <img src="img/petstar.png" alt="" width="50%">
             </div>
             <div class="menu">
@@ -35,11 +35,13 @@
         </nav>
     </header>
     <main>
-        <div class="container">
+        <!-- <div class="container">
             <h1>Data Admin</h1>
             <button type="submit" class="add">+ Tambah Admin</button>
-        </div>
+        </div> -->
         <div class="container">
+             <h1>DATA ADMIN</h1>
+            <button type="submit" class="add">+ Tambah Admin</button>
             <table class="content-table">
                 <thead>
                     <tr>
