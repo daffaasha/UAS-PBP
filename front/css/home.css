@@ -1,150 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
-
-.universal {
-    font-family: 'Inter', sans-serif;;
+body {
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
 .nav-prop {
-    background-color: #4A97FE;
+  background-color: #4a97fe;
 }
 
 .brand-logo {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .icon-prop {
-    color: white;
-    margin-right: 10px;
-    transition: color 0.1s;
+  color: white;
+  margin-right: 10px;
+  transition: color 0.1s;
 }
 
 .icon-prop:hover {
-    color: rgb(193, 193, 193);
+  color: rgb(193, 193, 193);
 }
 
 .search-container {
-    width: 100%;
-    margin: auto;
-    margin-top: 3vh;
+  width: 100%;
+  margin: auto;
+  margin-top: 3vh;
+  padding-right: 2.8vw;
 }
 
 .no-margin {
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .input-container {
-    height: 35px;
+  height: 35px;
 }
 
 .login-input {
-    /* border-radius: 20%; */
-    border-color: #37547B;
-    border-left-color: white;
-    /* border: none; */
-    outline: none;
-    margin-bottom: 12px;
+  border-color: #37547b;
+  border-left-color: white;
+  outline: none;
+  margin-bottom: 12px;
 }
 
 .login-span {
-    background-color: white;
-    border-color: #37547B;
+  background-color: white;
+  border-color: #37547b;
 }
 
 .icon-color {
-    color: #37547B;
+  color: #37547b;
 }
 
 .form-control:focus {
-    border-color: #37547B;
-} 
+  border-color: #37547b;
+}
 
 .product {
-    font: inter;
-    color: #37547B;
-    font-weight: 600;
-    margin-top: 5px;
+  font: inter;
+  color: #37547b;
+  font-weight: 800;
+  margin-top: 5px;
 }
 
 .btn-tambah {
-    width: 10vw;
-    background-color: #4A97FE;
-    color: white;
-    float: right;
+  width: 10vw;
+  background-color: #4a97fe;
+  color: white;
+  float: right;
+  margin-right: 2.8vw;
+  border-radius: 11px;
 }
 
-input[type="checkbox"]  {
-    display: none;
- }
+input[type='checkbox'] {
+  display: none;
+}
 
- .card-container {
-    margin-top: 40px;
-    margin-right: 3.2vw;
-    margin-left: 3.2vw;    
- }
+.card-container {
+  overflow-y: scroll;
+}
 
+.card-content {
+  padding: 8px;
+}
 
- .card-content {
-    padding: 8px;
- }
+.card-text {
+  margin-top: 2px;
+}
 
- .card-text{
-    margin-top: 2px;
- }
+.card-title {
+  font-weight: 700;
+}
 
- .card-title {
-    font-weight: 700;
- }
+.card-text,
+.card-title {
+  color: #37547b;
+  margin-bottom: 5px;
+}
 
- .card-text, .card-title {
-    color: #37547B;
-    margin-bottom: 5px;
- }
+.card {
+  width: 14rem;
+  background-color: rgba(248, 252, 255, 1);
+  box-shadow: 0px 2px 8px 0px rgba(120, 157, 208, 0.28);
+  border: 1px solid #cbecff80;
+}
 
- .card {
-    width: 14rem;
-    background-color: rgba(248, 252, 255, 1);
-    box-shadow: 0px 2px 8px 0px rgba(120, 157, 208, 0.28);
-    border: 3px solid red;
+.main {
+  margin-right: 0.2vw;
+  margin-left: 3vw;
+}
 
- }
+.no-padding {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-top: 30px;
+}
 
- .main {
-    /* background-color: red; */
-    margin-right: 3vw;
-    margin-left: 3vw;
- }
+.col-card {
+  margin-top: 20px;
+}
 
- .no-padding {
-    padding-right: 0px;
-    padding-left: 0px;
-    margin-top: 30px;
- }
+.stok {
+  font-size: 12px;
+}
 
- .col-card {
-    width: 13rem;
- }
+.submit-button {
+  height: 8vh;
+  background-color: #4a97fe;
+  bottom: 0;
+  position: fixed;
+}
 
- .stok {
-    font-size: 12px;
- }
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 
- .row-bg {
-    background-color: aqua;
- }
+.submit-container {
+  width: 100%;
+  height: 60px;
+  background: #4a97fe;
+}
 
- .col-center {
-    margin: auto;
- }
+.btn-submit {
+  float: right;
+  border: none;
+  background-color: #4a97fe;
+  color: white;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-right: 30px;
+  font-size: 17px;
+  height: 100%;
+  transition: color 0.1s;
+}
 
- .card-container {
-    margin: 0;
- }
-
-
-
- 
- 
+.btn-submit:hover {
+  color: #37547b;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,12 +15,10 @@
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
-        rel="stylesheet"
-        />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
     <header>
         <nav>
             <div class="logo">
@@ -28,7 +27,7 @@
             </div>
             <div class="menu">
                 <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="#"><img src="img/user-white.svg" alt="setting" width="75%" ></a>
+                <a href="#"><img src="img/user-white.svg" alt="setting" width="75%"></a>
                 <!-- <ul class="dropdown">
                     <li><a href="#">Log Out</a></li>
                 </ul> -->
@@ -40,7 +39,7 @@
             <button type="submit" class="add">+ Tambah Admin</button>
         </div> -->
         <div class="container">
-             <h1>DATA ADMIN</h1>
+            <h1>DATA ADMIN</h1>
             <button type="submit" class="add">+ Tambah Admin</button>
             <table class="content-table">
                 <thead>
@@ -58,8 +57,8 @@
                         <td>zulfanlorem</td>
                         <td>ganteng</td>
                         <td>uhuyyy</td>
-                        <td><img src="img/edit.svg" alt="" width="16px" ></td>
-                        <td class="end"><img src="img/delete.svg" alt="" width="16px"   >
+                        <td><img src="img/edit.svg" alt="" width="16px"></td>
+                        <td class="end"><img src="img/delete.svg" alt="" width="16px">
                         </td>
                     </tr>
                     <tr class="active-row">
@@ -67,8 +66,8 @@
                         <td>zulfanlorem</td>
                         <td>ganteng</td>
                         <td>uhuyyy</td>
-                        <td><img src="img/edit.svg" alt="" width="16px" ></td>
-                        <td class="end"><img src="img/delete.svg" alt="" width="16px"   >
+                        <td><img src="img/edit.svg" alt="" width="16px"></td>
+                        <td class="end"><img src="img/delete.svg" alt="" width="16px">
                         </td>
                     </tr>
                     <tr class="active-row">
@@ -76,8 +75,8 @@
                         <td>zulfanlorem</td>
                         <td>ganteng</td>
                         <td>uhuyyy</td>
-                        <td><img src="img/edit.svg" alt="" width="16px" ></td>
-                        <td class="end"><img src="img/delete.svg" alt="" width="16px"   >
+                        <td><img src="img/edit.svg" alt="" width="16px"></td>
+                        <td class="end"><img src="img/delete.svg" alt="" width="16px">
                         </td>
                     </tr>
                     <tr class="active-row">
@@ -85,13 +84,14 @@
                         <td>zulfanlorem</td>
                         <td>ganteng</td>
                         <td>uhuyyy</td>
-                        <td><img src="img/edit.svg" alt="" width="16px" ></td>
-                        <td class="end"><img src="img/delete.svg" alt="" width="16px"   >
+                        <td><img src="img/edit.svg" alt="" width="16px"></td>
+                        <td class="end"><img src="img/delete.svg" alt="" width="16px">
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </main>
-  </body>
+</body>
+
 </html>
