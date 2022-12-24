@@ -27,17 +27,11 @@
                 <img src="img/petstar.png" alt="" width="50%">
             </div>
             <div class="menu">
-<<<<<<< HEAD:front/admin.html
                 <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
                 <a href="#"><img src="img/user-white.svg" alt="setting" width="75%" ></a>
                 <!-- <ul class="dropdown">
                     <li><a href="#">Log Out</a></li>
                 </ul> -->
-=======
-                <a href="#"><img src="img/user.svg" alt="nama-user" width="75%"></a>
-                <a href="#"><img src="img/setting.svg" alt="setting" width="75%"></a>
-                <a href="#" class="logout">Logout</a>
->>>>>>> c17aac7fb939a5ea0cf77f30abb618462baa53d6:front/admin.php
         </nav>
     </header>
     <main>
