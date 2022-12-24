@@ -23,25 +23,29 @@
     <header>
         <nav>
             <div class="logo">
-                <!-- <img src="img/logo.png" alt="" class="logo-kotak" width="25%"> -->
+                <img src="img/logo.png" alt="" class="logo-kotak" width="25%">
                 <img src="img/petstar.png" alt="" width="50%">
             </div>
             <div class="menu">
+<<<<<<< HEAD:front/admin.html
                 <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
                 <a href="#"><img src="img/user-white.svg" alt="setting" width="75%" ></a>
                 <!-- <ul class="dropdown">
                     <li><a href="#">Log Out</a></li>
                 </ul> -->
+=======
+                <a href="#"><img src="img/user.svg" alt="nama-user" width="75%"></a>
+                <a href="#"><img src="img/setting.svg" alt="setting" width="75%"></a>
+                <a href="#" class="logout">Logout</a>
+>>>>>>> c17aac7fb939a5ea0cf77f30abb618462baa53d6:front/admin.php
         </nav>
     </header>
     <main>
-        <!-- <div class="container">
+        <div class="container">
             <h1>Data Admin</h1>
             <button type="submit" class="add">+ Tambah Admin</button>
-        </div> -->
+        </div>
         <div class="container">
-             <h1>DATA ADMIN</h1>
-            <button type="submit" class="add">+ Tambah Admin</button>
             <table class="content-table">
                 <thead>
                     <tr>
