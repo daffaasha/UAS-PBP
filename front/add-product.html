@@ -40,21 +40,31 @@
             <h2>Tambah Product</h2>
         </div>
         <!-- <div class="flex-content-left"> -->
-        <form action="" method="post">
-            <div class="container">
-                <div class="left-side">
-                    <img src="img/product-image.png" alt="" class="img-change">
-                    <br>
-                    <label for="image">Ubah</label>
-                    <input type="file" name="image" id="image" hidden required>
+        <form action="" method="post" class="container">
+            <!-- <div class="container bg-color"> -->
+                <div class="add-pr">
+                    <div class="left-side">
+                        <img src="img/product-image.png" alt="" class="img-change">
+                        <!-- <br> -->
+                        <label for="image">Ubah</label>
+                        <input type="file" name="image" id="image" hidden required>
+                    </div>
+                    <div class="right-side">
+                        <div class="inside-right-side">
+                        <label for="produk">Nama Produk</label>
+                        <input type="text" name="produk" id="produk" required>
+                        </div>
+                        <div class="inside-right-side">
+                        <label for="harga">Harga</label><input type="text" name="harga" id="harga" required>
+                        </div>
+                        <div class="inside-right-side">
+                        <label for="stok">Stok</label><input type="text" name="stok" id="stok" required>
+                        </div>
+                    </div>
                 </div>
-                <div class="right-side">
-                    <label for="produk">Nama Produk</label><input type="text" name="produk" id="produk" required>
-                    <label for="harga">harga</label><input type="text" name="harga" id="harga" required>
-                    <label for="stok">stok</label><input type="text" name="stok" id="stok" required>
-                </div>
-                <button type="submit">Tambahkan</button>
-            </div>
+            <!-- </div> -->
+            <button type="submit" class="btn-add">Tambahkan</button>       
+
         </form>
     </main>
     <script>
