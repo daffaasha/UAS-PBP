@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petstar - add product</title>
+    <!-- logo -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
+        rel="stylesheet"
+        />
+  </head>
+  <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="img/logo.png" alt="" class="logo-kotak" width="25%"> -->
+                <img src="img/petstar.png" alt="" width="50%">
+            </div>
+            <div class="menu">
+                <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
+                <a href="#"><img src="img/user-white.svg" alt="setting" width="75%" ></a>
+                <!-- <ul class="dropdown">
+                    <li><a href="#">Log Out</a></li>
+                </ul> -->
+        </nav>
+    </header>
+    <main>
+        <div class="container flex-content-middle">
+            <img src="img/left-arrow.svg" alt="back" width="24px">
+            <h2>Tambah Product</h2>
+        </div>
+        <!-- <div class="flex-content-left"> -->
+        <form action="" method="post">
+            <div class="container">
+                <div class="left-side">
+                    <img src="" alt="" class="img-change">
+                    <input type="file" name="image" id="image">
+                </div>
+                <div class="right-side">
+                    <label for="produk">Nama Produk</label><input type="text" name="produk" id="produk">
+                    <label for="harga">harga</label><input type="text" name="harga" id="harga">
+                    <label for="stok">stok</label><input type="text" name="stok" id="stok">
+                </div>
+                <button type="submit">Tambahkan</button>
+            </div>
+        </form>
+    </main>
+    <script>
+        const image = document.getElementById("image");
+        const imgChange = document.querySelector(".img-change");
+        image.addEventListener("change", function () {
+            const file = this.files[0];
+            if (file) {
+            const reader = new FileReader();
+            reader.addEventListener("load", function () {
+                imgChange.setAttribute("src", this.result);
+                imgChange.style.width = "150px";
+                imgChange.style.height = "150px";
+                imgChange.style.objectFit = "cover";
+                imgChange.style.objectPosition = "25% 25%";
+            });
+            reader.readAsDataURL(file);
+            }
+        });
+    </script>
+  </body>
+</html>
