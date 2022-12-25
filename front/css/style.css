@@ -124,7 +124,7 @@ main{
     box-sizing: border-box;
     align-items: center;
     /* background-color: #E6F6FF; */
-    width: 70%;
+    width: 90%;
     border-radius: 5px;
     margin-top: 32px;
 }
@@ -144,6 +144,96 @@ main{
     padding-top: 0;
 }
 
+/* add product CSS */
+.add-pr{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color:  #E6F6FF;
+    padding: 16px;
+}
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    align-items: center;
+    /* background-color: blue; */
+    border-radius: 5px;
+    color: #37547B;
+    margin-left: 20px;
+}
+
+.inside-right-side{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    /* margin: auto; */
+    font-size: 20px;
+    /* background-color: #37547B; */
+}
+
+.inside-right-side input{
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #37547B;
+    margin: 12px 0;
+    outline: none;
+}
+
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    box-sizing: border-box;
+    align-items: center;
+    /* background-color: red; */
+    border-radius: 5px;
+}
+
+.left-side label{
+    box-sizing: border-box;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    width: 100%;
+    margin-top: 12px;
+    background-color:rgba(74, 151, 254, 1) ;
+}
+.left-side label:hover{
+    background-color:rgb(24, 122, 250) ;
+}
+
+
+.btn-add{
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    background-color: rgba(74, 151, 254, 1);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
+.btn-add:active{
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    background-color: rgb(32, 129, 255);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
 /* back */
 
 .flex-content-middle{
