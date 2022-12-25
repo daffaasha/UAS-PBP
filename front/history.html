@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>History</title>
+    <title>Petstar - History</title>
     <!-- logo -->
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
 
@@ -42,11 +42,11 @@
         <!-- <div class="flex-content-left"> -->
             <form action="" class="container flex-content-left">
                 <div class="tanggal">
-                    <select name="date" id="date" class="tanggal">
+                    <!-- <select name="date" id="date" class="tanggal">
                         <option value="tanggal">tanggal</option>
                         <option value="disini dikasih JS">disini dikasih PHP Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quae blanditiis et error aspernatur ipsam, nisi laboriosam consectetur! Quasi incidunt, autem explicabo reprehenderit quos ut placeat officiis harum non sit? looping tanggal dari database</option>
-                    </select>
-                    <!-- <input type="date" name="" id=""> -->
+                    </select> -->
+                    <input type="date" name="tanggal" id="tanggal" class="tanggal">
                 </div>        
                 <div class="search-inp">
                     <input type="text" placeholder="Search">
@@ -62,7 +62,8 @@
                         <th>Product</th>
                         <th>Jumlah</th>
                         <th>Subtotal</th>
-                        <th class="end">Metode</th>
+                        <th>Metode</th>
+                        <th class="end">Detail</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -72,25 +73,9 @@
                         <td>Cat Food</td>
                         <td>19</td>
                         <td>Rp 360.000</td>
-                        <td class="end">GoPay</td>
+                        <td>GoPay</td>
+                        <td class="end"><a href="#"><img src="img/invoice.svg" alt="detail" width="24px"></a></td>
                     </tr>
-                    <tr class="active-row">
-                        <td class="first">1</td>
-                        <td>Tanggal</td>
-                        <td>Cat Food</td>
-                        <td>19</td>
-                        <td>Rp 360.000</td>
-                        <td class="end">GoPay</td>
-                    </tr>
-                    <tr class="active-row">
-                        <td class="first">1</td>
-                        <td>Tanggal</td>
-                        <td>Cat Food</td>
-                        <td>19</td>
-                        <td>Rp 360.000</td>
-                        <td class="end">GoPay</td>
-                    </tr>
-                    
                 </tbody>
             </table>
             <div class="container cetak"><button>Cetak Laporan</button></div>

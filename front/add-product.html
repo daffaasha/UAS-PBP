@@ -43,13 +43,15 @@
         <form action="" method="post">
             <div class="container">
                 <div class="left-side">
-                    <img src="" alt="" class="img-change">
-                    <input type="file" name="image" id="image">
+                    <img src="img/product-image.png" alt="" class="img-change">
+                    <br>
+                    <label for="image">Ubah</label>
+                    <input type="file" name="image" id="image" hidden required>
                 </div>
                 <div class="right-side">
-                    <label for="produk">Nama Produk</label><input type="text" name="produk" id="produk">
-                    <label for="harga">harga</label><input type="text" name="harga" id="harga">
-                    <label for="stok">stok</label><input type="text" name="stok" id="stok">
+                    <label for="produk">Nama Produk</label><input type="text" name="produk" id="produk" required>
+                    <label for="harga">harga</label><input type="text" name="harga" id="harga" required>
+                    <label for="stok">stok</label><input type="text" name="stok" id="stok" required>
                 </div>
                 <button type="submit">Tambahkan</button>
             </div>
@@ -64,8 +66,8 @@
             const reader = new FileReader();
             reader.addEventListener("load", function () {
                 imgChange.setAttribute("src", this.result);
-                imgChange.style.width = "150px";
-                imgChange.style.height = "150px";
+                imgChange.style.width = "200px";
+                imgChange.style.height = "200px";
                 imgChange.style.objectFit = "cover";
                 imgChange.style.objectPosition = "25% 25%";
             });
