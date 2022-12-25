@@ -144,7 +144,7 @@ nav .menu img{
 
 .label {
     color: rgba(55, 84, 123, 1);
-    font-weight: 600px;
+    font-weight: 600;
     font-size: 16px;
     flex-basis: 20%;
 }

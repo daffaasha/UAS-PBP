@@ -13,17 +13,19 @@
   <header>
     <nav>
       <div class="logo">
-        <img src="img/petstar.png" alt="" width="50%">
+        <a href="home.php" target="_blank" rel="noopener noreferrer"><img src="img/petstar.png" alt="" width="50%"></a>
       </div>
       <div class="menu">
         <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-        <a href="#"><img src="img/user-white.svg" alt="setting" width="75%"></a>
+        <a href="profile.php"><img src="img/user-white.svg" alt="setting" width="75%"></a>
     </nav>
   </header>
 
   <main>
     <div class="title-container">
-      <img src="img/left-arrow.svg" alt="back" width="24px">
+      <a href="home.php" target="_blank" rel="noopener noreferrer">
+        <img src="img/left-arrow.svg" alt="back" width="24px">
+      </a>
       <p class="profile-title">Profile</p>
     </div>
 
