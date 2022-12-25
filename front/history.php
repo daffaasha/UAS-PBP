@@ -1,3 +1,13 @@
+<?php
+
+    include "koneksi.php";
+
+    $query = mysqli_query($koneksi, "SELECT * FROM `tabel_riwayat`");
+    $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -59,14 +69,26 @@
                     <tr>
                         <th class="first">ID</th>
                         <th>Date</th>
-                        <th>Product</th>
-                        <th>Jumlah</th>
                         <th>Subtotal</th>
-                        <th class="end">Metode</th>
+                        <th>Metode</th>
+                        <th class="end">Detail</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="active-row">
+                <?php foreach($riwayat as $r) : ?>
+                <tr>
+                    <td><?php echo $r["ID_RIWAYAT"]; ?></td>
+                    <td><?php echo $r["TANGGAL"];?></td>
+                    <td><?php echo $r["TOTAL_HARGA"]; ?></td>
+                    <td><?php echo $r["METODE_P"];?></td>
+                    <td class="end">
+                        <a href="detail.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
+                        Detail
+                        </a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                    <!-- <tr class="active-row">
                         <td class="first">1</td>
                         <td>Tanggal</td>
                         <td>Cat Food</td>
@@ -89,8 +111,7 @@
                         <td>19</td>
                         <td>Rp 360.000</td>
                         <td class="end">GoPay</td>
-                    </tr>
-                    
+                    </tr> -->
                 </tbody>
             </table>
             <div class="container cetak"><button>Cetak Laporan</button></div>
