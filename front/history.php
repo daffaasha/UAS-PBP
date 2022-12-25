@@ -1,9 +1,10 @@
 <?php
 
     include "koneksi.php";
-
     $query = mysqli_query($koneksi, "SELECT * FROM `tabel_riwayat`");
-    $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+    $query1 = mysqli_query($koneksi, "SELECT * FROM `tabel_user`");
+    $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);
+    $user = mysqli_fetch_all($query1, MYSQLI_ASSOC); 
 
 ?>
 
@@ -38,7 +39,9 @@
             </div>
             <div class="menu">
                 <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="#"><img src="img/user-white.svg" alt="setting" width="75%" ></a>
+                <a href="profile.php">
+                <img src="img/user-white.svg" alt="setting" width="75%" >
+                </a>
                 <!-- <ul class="dropdown">
                     <li><a href="#">Log Out</a></li>
                 </ul> -->
@@ -82,7 +85,7 @@
                     <td><?php echo $r["TOTAL_HARGA"]; ?></td>
                     <td><?php echo $r["METODE_P"];?></td>
                     <td class="end">
-                        <a href="detail.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
+                        <a href="detail.php?ID_RIWAYAT=<?php echo $r['ID_RIWAYAT']; ?>" >
                         Detail
                         </a>
                     </td>

@@ -28,6 +28,15 @@
 </head>
 
 <body>
+    <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['USERNAME']==""){
+		header("location:index.php?pesan=gagal");
+	}
+ 
+	?>
     <header>
         <nav>
             <div class="logo">
@@ -36,7 +45,8 @@
             </div>
             <div class="menu">
                 <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="#"><img src="img/user-white.svg" alt="setting" width="75%"></a>
+                <a href="profile.php"><img src="img/user-white.svg" alt="setting" width="75%"></a>
+            </div>    
                 <!-- <ul class="dropdown">
                     <li><a href="#">Log Out</a></li>
                 </ul> -->
@@ -68,7 +78,7 @@
                     <td><?php echo $a["USERNAME"]; ?></td>
                     <td><?php echo $a["PASSWORD"];?></td>
                     <td>
-                        <a href="ubah.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
+                        <a href="profile.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
                         <img src="img/edit.svg" alt="" width="16px"> 
                         </a>
                     </td>
