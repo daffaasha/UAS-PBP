@@ -1,9 +1,10 @@
 <?php
 
     include "koneksi.php";
-
     $query = mysqli_query($koneksi, "SELECT * FROM `tabel_riwayat`");
-    $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+    $query1 = mysqli_query($koneksi, "SELECT * FROM `tabel_user`");
+    $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);
+    $user = mysqli_fetch_all($query1, MYSQLI_ASSOC); 
 
 ?>
 
@@ -14,7 +15,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Petstar - History</title>
+    <title>History</title>
     <!-- logo -->
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
 
@@ -38,7 +39,9 @@
             </div>
             <div class="menu">
                 <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="#"><img src="img/user-white.svg" alt="setting" width="75%" ></a>
+                <a href="profile.php">
+                <img src="img/user-white.svg" alt="setting" width="75%" >
+                </a>
                 <!-- <ul class="dropdown">
                     <li><a href="#">Log Out</a></li>
                 </ul> -->
@@ -52,11 +55,11 @@
         <!-- <div class="flex-content-left"> -->
             <form action="" class="container flex-content-left">
                 <div class="tanggal">
-                    <!-- <select name="date" id="date" class="tanggal">
+                    <select name="date" id="date" class="tanggal">
                         <option value="tanggal">tanggal</option>
                         <option value="disini dikasih JS">disini dikasih PHP Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quae blanditiis et error aspernatur ipsam, nisi laboriosam consectetur! Quasi incidunt, autem explicabo reprehenderit quos ut placeat officiis harum non sit? looping tanggal dari database</option>
-                    </select> -->
-                    <input type="date" name="tanggal" id="tanggal" class="tanggal">
+                    </select>
+                    <!-- <input type="date" name="" id=""> -->
                 </div>        
                 <div class="search-inp">
                     <input type="text" placeholder="Search">
@@ -82,8 +85,8 @@
                     <td><?php echo $r["TOTAL_HARGA"]; ?></td>
                     <td><?php echo $r["METODE_P"];?></td>
                     <td class="end">
-                        <a href="detail.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
-                        <img src="img/invoice.svg" alt="" srcset="">
+                        <a href="detail.php?ID_RIWAYAT=<?php echo $r['ID_RIWAYAT']; ?>" >
+                        Detail
                         </a>
                     </td>
                 </tr>
@@ -94,8 +97,7 @@
                         <td>Cat Food</td>
                         <td>19</td>
                         <td>Rp 360.000</td>
-                        <td>GoPay</td>
-                        <td class="end"><a href="#"><img src="img/invoice.svg" alt="detail" width="24px"></a></td>
+                        <td class="end">GoPay</td>
                     </tr>
                     <tr class="active-row">
                         <td class="first">1</td>
