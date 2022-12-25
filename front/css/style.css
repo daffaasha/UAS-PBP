@@ -137,6 +137,12 @@ main{
 
 }
 
+/* set container margin to 0 */
+
+.m{
+    margin: 0;
+}
+
 /* back */
 
 .flex-content-middle{
@@ -153,21 +159,44 @@ main{
 .flex-content-left{
     display: flex;
     flex-direction: row;
+    width: 66%;
     /* justify-content: left; */
     align-items: center;
     color:rgba(55, 84, 123, 1);
     background-color: #E6F6FF;
-}
-.flex-content-left .tanggal{
-    max-width: 10px;
+    padding: 0;
 }
 
-input{
-    width: 420px;
-    height: 20px;
-    margin-left: 12px;
-    border: none;
+/* dropdown */
+.flex-content-left .tanggal{
+    max-width: 200px;
+    padding: 12px 12px;
     outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.flex-content-left .tanggal option{
+    max-width: 200px;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+/* search */
+.flex-content-left .search-inp{
+    width: 100%;
+    display: flex;
+    padding: 12px;
+
+}
+
+.flex-content-left .search-inp input{
+    width: 100%;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
 

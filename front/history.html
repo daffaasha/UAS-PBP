@@ -36,25 +36,30 @@
     </header>
     <main>
         <div class="container flex-content-middle">
-            <img src="img/left-arrow.svg" alt="" width="24px">
+            <img src="img/left-arrow.svg" alt="back" width="24px">
             <h2>Riwayat Pembelian</h2>
         </div>
-        <div class="container flex-content-left">
-            <form action="">            
-                <select name="date" id="date" class="tanggal">
-                    <option value="disini dikasih JS">disini dikasih PHP looping tanggal dari database</option>
-                </select>
-                <input type="text" placeholder="Search">
+        <!-- <div class="flex-content-left"> -->
+            <form action="" class="container flex-content-left">
+                <div class="tanggal">
+                    <select name="date" id="date" class="tanggal">
+                        <option value="tanggal">tanggal</option>
+                        <option value="disini dikasih JS">disini dikasih PHP Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quae blanditiis et error aspernatur ipsam, nisi laboriosam consectetur! Quasi incidunt, autem explicabo reprehenderit quos ut placeat officiis harum non sit? looping tanggal dari database</option>
+                    </select>
+                    <!-- <input type="date" name="" id=""> -->
+                </div>        
+                <div class="search-inp">
+                    <input type="text" placeholder="Search">
+                </div>
             </form>
-        </div>
-        <div class="container">
+        <!-- </div> -->
+        <div class="container m">
             <table class="content-table">
                 <thead>
                     <tr>
                         <th class="first">ID</th>
                         <th>Date</th>
                         <th>Product</th>
-                        <th>Variasi</th>
                         <th>Jumlah</th>
                         <th>Subtotal</th>
                         <th class="end">Metode</th>
@@ -65,7 +70,6 @@
                         <td class="first">1</td>
                         <td>Tanggal</td>
                         <td>Cat Food</td>
-                        <td>Salmon</td>
                         <td>19</td>
                         <td>Rp 360.000</td>
                         <td class="end">GoPay</td>
@@ -74,7 +78,6 @@
                         <td class="first">1</td>
                         <td>Tanggal</td>
                         <td>Cat Food</td>
-                        <td>Salmon</td>
                         <td>19</td>
                         <td>Rp 360.000</td>
                         <td class="end">GoPay</td>
@@ -83,7 +86,6 @@
                         <td class="first">1</td>
                         <td>Tanggal</td>
                         <td>Cat Food</td>
-                        <td>Salmon</td>
                         <td>19</td>
                         <td>Rp 360.000</td>
                         <td class="end">GoPay</td>
