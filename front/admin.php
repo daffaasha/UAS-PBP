@@ -1,3 +1,12 @@
+<?php
+
+    include "koneksi.php";
+
+    $query = mysqli_query($koneksi, "SELECT * FROM `tabel_user` WHERE `LEVEL` LIKE 'pegawai' ");
+    $admin = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,7 +61,25 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="active-row">
+                <?php foreach($admin as $a) : ?>
+                <tr>
+                    <td><?php echo $a["ID_USER"]; ?></td>
+                    <td><?php echo $a["NAMA"];?></td>
+                    <td><?php echo $a["USERNAME"]; ?></td>
+                    <td><?php echo $a["PASSWORD"];?></td>
+                    <td>
+                        <a href="ubah.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
+                        <img src="img/edit.svg" alt="" width="16px"> 
+                        </a>
+                    </td>
+                    <td class="end">
+                        <a href="hapus.php?ID_USER=<?php echo $a['ID_USER']; ?>">
+                            <img src="img/delete.svg" alt="" width="16px">
+                        </a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+                    <!-- <tr class="active-row">
                         <td class="first">1</td>
                         <td>zulfanlorem</td>
                         <td>ganteng</td>
@@ -87,7 +114,7 @@
                         <td><img src="img/edit.svg" alt="" width="16px"></td>
                         <td class="end"><img src="img/delete.svg" alt="" width="16px">
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
