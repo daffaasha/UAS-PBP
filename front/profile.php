@@ -76,11 +76,40 @@
         </div>
       </div>
 
-      <input type="button" value="SIMPAN" class="save-data">
+      <input type="button" value="SIMPAN" class="save-data" onclick="confirmPoppup()">
     </form>
     
-    <input type="button" value="LOG OUT" class="logout">
+    <input type="button" value="LOG OUT" class="logout" onclick="logoutPoppup();">
   </main>
+
+  <div class="poppup" id="poppup-logout">
+    <img src="img/logout.svg" alt="logout" class="poppup-pict">
+    <p class="poppup-text">Apakah Anda Ingin Logout?</p>
+    <div class="buttons">
+      <input type="button" value="Cancel" class="cancel-btn" onclick="logoutPoppupCls()">
+      <input type="button" value="Log Out" class="logout-btn">
+    </div>
+  </div>
+
+  <div class="poppup" id="poppup-confirm">
+    <img src="img/confirm.svg" alt="confirm" class="poppup-pict">
+    <p class="poppup-text">Apakah Anda Ingin Menyimpan Perubahan?</p>
+    <div class="buttons">
+      <input type="button" value="Cancel" class="cancel-btn" onclick="confirmPoppupCls()">
+      <input type="button" value="Simpan" class="logout-btn" onclick="donePoppup()">
+    </div>
+  </div>
+
+  <div class="poppup" id="poppup-done">
+    <img src="img/done.svg" alt="confirm" class="poppup-pict">
+    <p class="poppup-text">Profil Berhasil Diperbarui</p>
+    <div class="button-done">
+      <input type="button" value="Simpan" class="done-btn" onclick="donePoppupCls()">
+    </div>
+  </div>
+
+
+<script src="js/profile.js"></script>
 </body>
 
 </html>
