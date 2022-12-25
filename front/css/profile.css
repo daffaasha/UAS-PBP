@@ -50,6 +50,10 @@ table {
     font-family: 'Inter', sans-serif;
 }
 
+main {
+    margin: 0 3vw;
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -83,3 +87,132 @@ nav .menu img{
     width: 30px;
     margin-right: 8px;
 }
+
+/* back button and profile text on top */
+
+.title-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-title {
+    display: inline-block;
+    color: rgba(55, 84, 123, 1);
+    font-weight: 600;
+    margin-left: 8px;
+    font-size: 16px;
+    height: 100%;
+}
+
+/* profile data */
+
+.profile-data {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    background-color: rgba(230, 246, 255, 1);
+    border-radius: 5px;
+    padding: 30px 30px 30px 70px;
+}
+
+.profile-pict-container {
+    display: flex;
+    flex-basis: 30%;
+}
+
+.profile-pict {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.label {
+    color: rgba(55, 84, 123, 1);
+    font-weight: 600px;
+    font-size: 16px;
+    flex-basis: 35%;
+}
+
+.input-form-container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgba(74, 151, 254, 1);
+    padding: 2px;
+    flex-basis: 100%;
+    height: 30px;
+}
+
+.input-form {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.edit-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+/* passowrd section */
+.account-title {
+    margin: 40px 0 15px 0;
+}
+
+.account-data {
+    background-color: rgba(230, 246, 255, 1);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.password {
+    flex-basis: 15%;
+}
+
+.save-data {
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgba(74, 151, 254, 1);
+    height: 38px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.logout {
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgba(254, 74, 74, 1);
+    height: 38px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+
+
+
