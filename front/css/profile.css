@@ -50,6 +50,10 @@ table {
     font-family: 'Inter', sans-serif;
 }
 
+main {
+    margin: 0 3vw;
+}
+
 nav{
     display: flex;
     flex-direction: row;
@@ -83,3 +87,238 @@ nav .menu img{
     width: 30px;
     margin-right: 8px;
 }
+
+/* back button and profile text on top */
+
+.title-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-title {
+    display: inline-block;
+    color: rgba(55, 84, 123, 1);
+    font-weight: 600;
+    margin-left: 8px;
+    font-size: 16px;
+    height: 100%;
+}
+
+/* profile data */
+
+.profile-data {
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    background-color: rgba(230, 246, 255, 1);
+    border-radius: 5px;
+    padding: 30px 30px 30px 70px;
+}
+
+.profile-pict-container {
+    display: flex;
+    flex-basis: 20%;
+}
+
+.profile-pict {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-form {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.label {
+    color: rgba(55, 84, 123, 1);
+    font-weight: 600;
+    font-size: 16px;
+    flex-basis: 20%;
+}
+
+.input-form-container {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgba(74, 151, 254, 1);
+    padding: 2px;
+    flex-basis: 100%;
+    height: 30px;
+}
+
+.input-form {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.edit-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
+
+/* passowrd section */
+.account-title {
+    margin: 40px 0 15px 0;
+}
+
+.account-data {
+    background-color: rgba(230, 246, 255, 1);
+    border-radius: 5px;
+    padding: 30px;
+}
+
+.password {
+    flex-basis: 15%;
+}
+
+.save-data {
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgba(74, 151, 254, 1);
+    height: 38px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.save-data:hover {
+    background-color: rgb(49, 98, 161);
+    cursor: pointer;
+}
+
+.logout {
+    margin-top: 30px;
+    width: 100%;
+    background-color: rgba(254, 74, 74, 1);
+    height: 38px;
+    border-radius: 3px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.logout:hover {
+    background-color: rgb(157, 45, 45);
+    cursor: pointer;
+}
+
+
+/* poppup */
+
+.poppup {
+    width: 50%;
+    height: 20vw;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 13px 7px 25px 6px rgba(120, 157, 208, 0.28);
+    visibility: hidden;
+}
+
+.poppup-pict {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.poppup-text {
+    font-weight: 600;
+    color: rgba(55, 84, 123, 1);
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.cancel-btn, .logout-btn {
+    flex-basis: 45%;
+    background-color: rgba(254, 74, 74, 1);
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: background-color 0.1s;
+}
+
+.logout-btn {
+    background-color: rgba(74, 151, 254, 1);
+}
+
+.cancel-btn:hover {
+    background-color: rgb(157, 45, 45);
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: rgb(49, 98, 161);
+    cursor: pointer;
+}
+
+.button-done {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 25px;
+}
+
+.done-btn {
+    flex-basis: 100%;
+    background-color: rgba(74, 151, 254, 1);
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: background-color 0.1s;
+}
+
+.done-btn:hover {
+    background-color: rgb(49, 98, 161);
+    cursor: pointer;
+}
+
+.open-poppup {
+    visibility: visible;
+}
+
+
+
