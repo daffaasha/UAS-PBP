@@ -32,7 +32,7 @@ const addToChart = () => {
       cartRowContent2.classList.add("cart-quantity");
       const cartRowContent21 = document.createElement("div");
       cartRowContent21.classList.add("quantity-input");
-      cartRowContent21.innerHTML = `<input type="number">`;
+      cartRowContent21.innerHTML = `<input type="number" value="1">`;
       cartRowContent2.append(cartRowContent21);
       const cartRowContent22 = document.createElement("button");
       cartRowContent22.classList.add("delete-item");
@@ -76,6 +76,7 @@ const deleteChart = () => {
     });
   });
 };
+
 // invoke fungsi
 addToChart();
 deleteChart();
