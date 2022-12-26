@@ -9,7 +9,7 @@
     $total = $harga * $jumlah;
 
     
-    $query = mysqli_query($koneksi, "INSERT INTO tabel_riwayat (NAMA_BARANG,HARGA_SATUAN,TOTAL_HARGA,METODE_P) VALUES ('$nama_barang','$harga','$total','$metode')");
+    $query = mysqli_query($koneksi, "INSERT INTO tabel_riwayat (NAMA_BARANG,HARGA_SATUAN,JUMLAH,TOTAL_HARGA,METODE_P) VALUES ('$nama_barang','$harga','$jumlah','$total','$metode')");
     if($query){
         header("location: history.php?message=Data berhasil ditambahkan.");
     }else{
