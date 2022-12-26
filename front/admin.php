@@ -58,8 +58,8 @@
             <button type="submit" class="add">+ Tambah Admin</button>
         </div> -->
         <div class="container">
-            <h1>DATA ADMIN</h1>
-            <button type="submit" class="add">+ Tambah Admin</button>
+            <h1>DATA USER</h1>
+            <a href="tambahUser.php"><i class="add"></i>+ Tambah User</a>
             <table class="content-table">
                 <thead>
                     <tr>
@@ -67,6 +67,8 @@
                         <th>Nama</th>
                         <th>Username</th>
                         <th>Password</th>
+                        <th>Email</th>
+                        <th>Nomer</th>
                         <th colspan="2" class="end">Aksi</th>
                     </tr>
                 </thead>
@@ -77,13 +79,15 @@
                     <td><?php echo $a["NAMA"];?></td>
                     <td><?php echo $a["USERNAME"]; ?></td>
                     <td><?php echo $a["PASSWORD"];?></td>
+                    <td><?php echo $a["EMAIL"];?></td>
+                    <td><?php echo $a["NUMBER"];?></td>
                     <td>
-                        <a href="profile.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
+                        <a href="ubahProfile.php?ID_USER=<?php echo $a['ID_USER']; ?>" >
                         <img src="img/edit.svg" alt="" width="16px"> 
                         </a>
                     </td>
                     <td class="end">
-                        <a href="hapus.php?ID_USER=<?php echo $a['ID_USER']; ?>">
+                        <a href="hapusProfile.php?ID_USER=<?php echo $a['ID_USER']; ?>">
                             <img src="img/delete.svg" alt="" width="16px">
                         </a>
                     </td>
