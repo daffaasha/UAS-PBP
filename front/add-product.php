@@ -16,8 +16,6 @@
         $postStmt->execute();
     }
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -68,8 +66,9 @@
                     <div class="left-side">
                         <img src="img/product-image.png" alt="" class="img-change">
                         <!-- <br> -->
-                        <label for="image">Ubah</label>
-                        <input type="file" name="foto" id="image" hidden required>
+                        <input type="url" name="foto" id="image" required>
+                        <!-- <label for="image">Ubah</label>
+                        <input type="file" name="foto" id="image" hidden required> -->
                     </div>
                     <div class="right-side">
                         <div class="inside-right-side">
@@ -87,21 +86,33 @@
         </form>
     </main>
     <script>
+        // const image = document.getElementById("image");
+        // const imgChange = document.querySelector(".img-change");
+        // image.addEventListener("change", function () {
+        //     const file = this.files[0];
+        //     if (file) {
+        //     const reader = new FileReader();
+        //     reader.addEventListener("load", function () {
+        //         imgChange.setAttribute("src", this.result);
+        //         imgChange.style.width = "200px";
+        //         imgChange.style.height = "200px";
+        //         imgChange.style.objectFit = "cover";
+        //         imgChange.style.objectPosition = "25% 25%";
+        //     });
+        //     reader.readAsDataURL(file);
+        //     }
+        // });
+        
+        // change image using url
         const image = document.getElementById("image");
         const imgChange = document.querySelector(".img-change");
-        image.addEventListener("change", function () {
-            const file = this.files[0];
-            if (file) {
-            const reader = new FileReader();
-            reader.addEventListener("load", function () {
-                imgChange.setAttribute("src", this.result);
-                imgChange.style.width = "200px";
-                imgChange.style.height = "200px";
-                imgChange.style.objectFit = "cover";
-                imgChange.style.objectPosition = "25% 25%";
-            });
-            reader.readAsDataURL(file);
-            }
+        image.addEventListener("keyup", function (event) {
+            console.log("enter pressed")
+            imgChange.setAttribute("src", this.value);
+            imgChange.style.width = "200px";
+            imgChange.style.height = "200px";
+            imgChange.style.objectFit = "cover";
+            imgChange.style.objectPosition = "25% 25%";
         });
     </script>
   </body>
