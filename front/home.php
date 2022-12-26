@@ -1,3 +1,13 @@
+
+<?php
+
+include "koneksi.php";
+
+$query = mysqli_query($koneksi, "SELECT * FROM `tabel_barang`");
+$produk = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,29 +43,16 @@
         <input type="button" value="+ Add" class="btn-tambah">
       </div>
       <div class="product-container">
-        <div class="product-card">
-          <img src="img/meong-img.jpg" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Kucing</p>
-            <p class="product-price">600</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
-        </div>
-        <div class="product-card">
-          <img src="img/cat.webp" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Anjing</p>
-            <p class="product-price">10.000</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
-        </div>
-        <div class="product-card">
-          <img src="img/meong-img.jpg" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Japran</p>
-            <p class="product-price">0</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
+      <?php foreach($produk as $p) : ?>
+            <div class="product-card">
+              <img src="aset/<?php echo $p['FOTO']; ?>" alt="product" class="img-product">
+              <div class="product-info">
+                <p class="product-name"><?php echo $p['NAMA_BARANG']; ?></p>
+                <p class="product-price"><?php echo $p['HARGA']; ?></p>
+              </div>
+              <input type="button" value="Add Product" class="product-add">
+            </div>
+        <?php endforeach; ?>
         </div>
       </div>
     </div>
@@ -74,18 +71,18 @@
         </div>
 
         <div class="cart-col">
-          <div class="cart-name">
+          <!-- <div class="cart-name">
             <p class="name-item">Royal Canin Enak</p>
           </div>
           <div class="cart-quantity">
             <div class="quantity-input">
               <input type="number" value=1>
             </div>
-            <button class="delete-item"><img src="img/bin.svg" alt="delete"></button>
+            <input type="button" class="delete-item">
           </div>
           <div class="cart-price">
             <p class="price-item">Rp. 60.000</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="total-price">

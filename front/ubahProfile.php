@@ -52,7 +52,7 @@
       <input type="hidden" name = "id_user" value = "<?php echo $user['ID_USER']?>">
       <div class="profile-data">
         <div class="profile-pict-container">
-          <img src="<?php echo $user['FOTO']; ?>" alt="profile" class="profile-pict">
+          <img src="./aset/<?php echo $user['FOTO']; ?>" alt="profile" class="profile-pict">
         </div>
         <div class="profile-form">
           <div class="form-flex">
