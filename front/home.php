@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-  <link rel="shortcut icon" href="../res/meong img.jpg" type="image/x-icon" />
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
   <link rel="stylesheet" href="css/kucing.css">
 </head>
 
@@ -102,6 +102,6 @@
       </form>
     </div>
   </main>
+  <script src="./js/home.js"></script>t
 </body>
-
 </html>
