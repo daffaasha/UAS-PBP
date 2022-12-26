@@ -145,7 +145,7 @@ nav .menu img{
     background-color: rgba(74, 151, 254, 1);
     align-items: center;
     color: white;
-    width: 10%;
+    width: 100%;
     border: none;
     border-radius: 8px;
     font-weight: 500;
@@ -157,6 +157,10 @@ nav .menu img{
 .btn-tambah:hover {
     background-color: rgb(49, 98, 161);
     cursor: pointer;
+}
+
+.title-container a {
+    width: 15%;
 }
 
 .product-container {

@@ -16,7 +16,7 @@
 <body style="background-color: #f1faff; font-family: inter">
   <div class="container-fluid">
     <div class="row">
-      <img src="../res/meong img.jpg" alt="Ini Gambar Kucing" class="img-logo" />
+      <img src="img/logo-login.svg" alt="Ini Gambar Kucing" class="img-logo" />
     </div>
     <form action="cek.php" method="post">
       <div class="row input-container-uni">

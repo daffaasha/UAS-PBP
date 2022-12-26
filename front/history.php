@@ -65,20 +65,6 @@
             </a>
             <h2>Riwayat Pembelian</h2>
         </div>
-        <!-- <div class="flex-content-left"> -->
-            <form action="" class="container flex-content-left">
-                <div class="tanggal">
-                    <select name="date" id="date" class="tanggal">
-                        <option value="tanggal">tanggal</option>
-                        <option value="disini dikasih JS">disini dikasih PHP Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus quae blanditiis et error aspernatur ipsam, nisi laboriosam consectetur! Quasi incidunt, autem explicabo reprehenderit quos ut placeat officiis harum non sit? looping tanggal dari database</option>
-                    </select>
-                    <!-- <input type="date" name="" id=""> -->
-                </div>        
-                <div class="search-inp">
-                    <input type="text" placeholder="Search">
-                </div>
-            </form>
-        <!-- </div> -->
         <div class="container m">
             <table class="content-table">
                 <thead>
@@ -86,9 +72,10 @@
                         <th class="first">ID</th>
                         <th>Date</th>
                         <th>Name</th>
-                        <th>Harga</th>
+                        <th>Price</th>
+                        <th>Total</th>
                         <th>Subtotal</th>
-                        <th class="end">Metode</th>
+                        <th class="end">Payment Method</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -98,37 +85,13 @@
                     <td><?php echo $r["TANGGAL"];?></td>
                     <td><?php echo $r["NAMA_BARANG"]; ?></td>
                     <td><?php echo $r["HARGA_SATUAN"];?></td>
+                    <td><?php echo $r["JUMLAH"];?></td>
                     <td><?php echo $r["TOTAL_HARGA"]; ?></td>
                     <td class="end"><?php echo $r["NAMA_METODE"];?></td>
                 </tr>
                 <?php endforeach; ?>
-                    <!-- <tr class="active-row">
-                        <td class="first">1</td>
-                        <td>Tanggal</td>
-                        <td>Cat Food</td>
-                        <td>19</td>
-                        <td>Rp 360.000</td>
-                        <td class="end">GoPay</td>
-                    </tr>
-                    <tr class="active-row">
-                        <td class="first">1</td>
-                        <td>Tanggal</td>
-                        <td>Cat Food</td>
-                        <td>19</td>
-                        <td>Rp 360.000</td>
-                        <td class="end">GoPay</td>
-                    </tr>
-                    <tr class="active-row">
-                        <td class="first">1</td>
-                        <td>Tanggal</td>
-                        <td>Cat Food</td>
-                        <td>19</td>
-                        <td>Rp 360.000</td>
-                        <td class="end">GoPay</td>
-                    </tr> -->
                 </tbody>
             </table>
-            <div class="container cetak"><button>Cetak Laporan</button></div>
         </div>
     </main>
   </body>

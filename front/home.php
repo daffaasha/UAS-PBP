@@ -42,10 +42,6 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
   <main>
     <div class="product-side">
-      <div class="search-container">
-        <img src="img/lup.svg" alt="find" class="find-logo">
-        <input type="text" class="search-input">
-      </div>
       <div class="title-container">
         <p class="product-title">Product</p>
         <a href="tambahProduct.php">
