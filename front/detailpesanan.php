@@ -69,7 +69,18 @@
 
       <input type="button" value="Checkout" class="save-data" onclick="confirmPoppup()">
 
+      <div class="poppup" id="poppup-confirm">
+        <img src="img/confirm.svg" alt="confirm" class="poppup-pict">
+        <p class="poppup-text">Selesaikan Checkout?</p>
+        <div class="buttons">
+          <input type="button" value="Cancel" class="cancel-btn" onclick="confirmPoppupCls()">
+          <button type ="submit" class = "logout-btn">Checkout</button>
+        </div>
+      </div>
+
         </form>
     </main>
+
+    <script src="js/profile.js"></script>
 </body>
 </html>

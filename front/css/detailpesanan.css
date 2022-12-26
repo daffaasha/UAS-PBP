@@ -190,7 +190,7 @@ nav .menu img{
     border-radius: 5px;
     border: 1px solid rgba(74, 151, 254, 1);
     padding: 2px;
-    flex-basis: 10%;
+    flex-basis: 50px;
     height: 30px;
 }
 
@@ -238,4 +238,96 @@ select:focus {
 .save-data:hover {
     background-color: rgb(49, 98, 161);
     cursor: pointer;
+}
+
+.poppup {
+    width: 50%;
+    height: 20vw;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 13px 7px 25px 6px rgba(120, 157, 208, 0.28);
+    visibility: hidden;
+}
+
+.poppup-pict {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.poppup-text {
+    font-weight: 600;
+    color: rgba(55, 84, 123, 1);
+    margin-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.cancel-btn, .logout-btn {
+    flex-basis: 45%;
+    background-color: rgba(254, 74, 74, 1);
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: background-color 0.1s;
+}
+
+.logout-btn {
+    background-color: rgba(74, 151, 254, 1);
+}
+
+.cancel-btn:hover {
+    background-color: rgb(157, 45, 45);
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: rgb(49, 98, 161);
+    cursor: pointer;
+}
+
+.button-done {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 25px;
+}
+
+.done-btn {
+    flex-basis: 100%;
+    background-color: rgba(74, 151, 254, 1);
+    color: white;
+    font-weight: 500;
+    align-items: center;
+    border: none;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: background-color 0.1s;
+}
+
+.done-btn:hover {
+    background-color: rgb(49, 98, 161);
+    cursor: pointer;
+}
+
+.open-poppup {
+    visibility: visible;
 }
