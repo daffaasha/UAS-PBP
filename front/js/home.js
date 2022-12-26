@@ -23,7 +23,10 @@ const addToChart = () => {
       // ambil element cart-cont untuk nambahin elemnt (entar di append)
       const cartItems = document.querySelector(".cart-cont");
       // buat isi element baru yang bakalan di append
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2189907076bad82074a2cc15771ac1088fa5fc70
       const cartRowContent = document.createElement("div");
       cartRowContent.classList.add("cart-name");
       cartRowContent.innerHTML = `<p class="name-item">${name}</p>`;
@@ -35,6 +38,7 @@ const addToChart = () => {
       cartRowContent21.classList.add("quantity-input");
       cartRowContent21.innerHTML = `<input type="number" value="1">`;
       cartRowContent2.append(cartRowContent21);
+<<<<<<< HEAD
       const cartRowContent22 = document.createElement("input");
       cartRowContent22.type = "button";
       cartRowContent22.setAttribute("class", "delete-item");
@@ -42,6 +46,11 @@ const addToChart = () => {
       cartRowContent22.onclick = function () {
         this.parentElement.parentElement.remove();
       };
+=======
+      const cartRowContent22 = document.createElement("button");
+      cartRowContent22.classList.add("delete-item");
+      cartRowContent22.innerHTML = `<img src="img/bin.svg" alt="delete">`;
+>>>>>>> 2189907076bad82074a2cc15771ac1088fa5fc70
       cartRowContent2.append(cartRowContent22);
       cartRow.append(cartRowContent2);
 
@@ -51,6 +60,7 @@ const addToChart = () => {
       cartRow.append(cartRowContent3);
 
       cartItems.append(cartRow);
+<<<<<<< HEAD
       let deleteItem = document.querySelectorAll("input.delete-item");
       console.log(deleteItem);
       //   const cartRowContents = `
@@ -72,6 +82,26 @@ const addToChart = () => {
       //   //   append element baru ke cart-cont supaya muncul di cart
       //   cartItems.append(cartRow);
       //   console.log(deleteItem);
+=======
+      //   const cartRowContents = `
+      //           <div class="cart-name">
+      //             <p class="name-item">${name}</p>
+      //           </div>
+      //           <div class="cart-quantity">
+      //             <div class="quantity-input">
+      //               <input type="number">
+      //             </div>
+      //             <button class="delete-item"><img src="img/bin.svg" alt="delete"></button>
+      //           </div>
+      //           <div class="cart-price">
+      //             <p class="price-item">Rp. ${price}</p>
+      //           </div>
+      //         `;
+      // isi element barunya
+      //   cartRow.innerHTML = cartRowContents;
+      // append element baru ke cart-cont supaya muncul di cart
+      //   cartItems.append(cartRow);
+>>>>>>> 2189907076bad82074a2cc15771ac1088fa5fc70
     });
   });
 };

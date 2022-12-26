@@ -1,3 +1,13 @@
+
+<?php
+
+include "koneksi.php";
+
+$query = mysqli_query($koneksi, "SELECT * FROM `tabel_barang`");
+$produk = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,29 +43,16 @@
         <input type="button" value="+ Add" class="btn-tambah">
       </div>
       <div class="product-container">
-        <div class="product-card">
-          <img src="img/meong-img.jpg" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
-        </div>
-        <div class="product-card">
-          <img src="img/cat.webp" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
-        </div>
-        <div class="product-card">
-          <img src="img/meong-img.jpg" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
+      <?php foreach($produk as $p) : ?>
+            <div class="product-card">
+              <img src="aset/<?php echo $p['FOTO']; ?>" alt="product" class="img-product">
+              <div class="product-info">
+                <p class="product-name"><?php echo $p['NAMA_BARANG']; ?></p>
+                <p class="product-price"><?php echo $p['HARGA']; ?></p>
+              </div>
+              <input type="button" value="Add Product" class="product-add">
+            </div>
+        <?php endforeach; ?>
         </div>
       </div>
     </div>
@@ -74,7 +71,7 @@
         </div>
 
         <div class="cart-col">
-          <div class="cart-name">
+          <!-- <div class="cart-name">
             <p class="name-item">Royal Canin Enak</p>
           </div>
           <div class="cart-quantity">
@@ -85,7 +82,7 @@
           </div>
           <div class="cart-price">
             <p class="price-item">Rp. 60.000</p>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="total-price">
@@ -118,6 +115,90 @@
       </form>
     </div>
   </main>
-  <script src="./js/home.js"></script>
+  <script src="./js/home.js">
+    // get product and add to cart
+    //ambil semua button add product
+    const addBtn = document.querySelectorAll(".product-add");
+    console.log(addBtn);
+    let deleteItem = document.querySelectorAll(".delete-item");
+    console.log(deleteItem);
+
+    //buat fungsi
+    const addToChart = () => {
+      // loop semua button add product
+      addBtn.forEach((btn) => {
+        //tambah event listener clik ke button yang di klik
+        btn.addEventListener("click", () => {
+          //ngambil data dari product card
+          const product = btn.parentElement;
+          const name = product.querySelector(".product-name").innerText;
+          const price = product.querySelector(".product-price").innerText;
+          console.log(name, price);
+
+          //buat element baru
+          const cartRow = document.createElement("div");
+          cartRow.classList.add("cart-col");
+          // ambil element cart-cont untuk nambahin elemnt (entar di append)
+          const cartItems = document.querySelector(".cart-cont");
+          // buat isi element baru yang bakalan di append
+          const cartRowContent = document.createElement("div");
+          cartRowContent.classList.add("cart-name");
+          cartRowContent.innerHTML = `<p class="name-item">${name}</p>`;
+          cartRow.append(cartRowContent);
+
+          const cartRowContent2 = document.createElement("div");
+          cartRowContent2.classList.add("cart-quantity");
+          const cartRowContent21 = document.createElement("div");
+          cartRowContent21.classList.add("quantity-input");
+          cartRowContent21.innerHTML = `<input type="number" value="1">`;
+          cartRowContent2.append(cartRowContent21);
+          const cartRowContent22 = document.createElement("button");
+          cartRowContent22.classList.add("delete-item");
+          cartRowContent22.innerHTML = `<img src="img/bin.svg" alt="delete">`;
+          cartRowContent2.append(cartRowContent22);
+          cartRow.append(cartRowContent2);
+
+          const cartRowContent3 = document.createElement("div");
+          cartRowContent3.classList.add("cart-price");
+          cartRowContent3.innerHTML = `<p class="price-item">Rp. ${price}</p>`;
+          cartRow.append(cartRowContent3);
+
+          cartItems.append(cartRow);
+          //   const cartRowContents = `
+          //           <div class="cart-name">
+          //             <p class="name-item">${name}</p>
+          //           </div>
+          //           <div class="cart-quantity">
+          //             <div class="quantity-input">
+          //               <input type="number">
+          //             </div>
+          //             <button class="delete-item"><img src="img/bin.svg" alt="delete"></button>
+          //           </div>
+          //           <div class="cart-price">
+          //             <p class="price-item">Rp. ${price}</p>
+          //           </div>
+          //         `;
+          // isi element barunya
+          //   cartRow.innerHTML = cartRowContents;
+          // append element baru ke cart-cont supaya muncul di cart
+          //   cartItems.append(cartRow);
+        });
+      });
+    };
+
+    const deleteChart = () => {
+      deleteItem.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          console.log(btn.parentElement.parentElement);
+          btn.parentElement.parentElement.remove();
+        });
+      });
+    };
+
+    // invoke fungsi
+    addToChart();
+    deleteChart();
+
+  </script>
 </body>
 </html>

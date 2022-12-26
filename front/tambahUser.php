@@ -83,8 +83,16 @@
               <img src="img/pen.svg" alt="edit" class="edit-icon">
             </div>
           </div>
+          <!-- <div class="foto form-flex">
+            <p class="label">Foto</p>
+            <div class="input-form-container">
+              <input type="file" name = "uploadfile" class="input-form" value = "">
+              <img src="img/pen.svg" alt="edit" class="edit-icon">
+            </div>
+          </div> -->
         </div> 
       </div>
+
 
       <h2 class="account-title profile-title">Password</h2>
 
