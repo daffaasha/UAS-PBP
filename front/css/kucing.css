@@ -94,7 +94,7 @@ nav .menu img{
 
 /* product-side */
 .product-side {
-    flex-basis: 60%;
+    flex-grow: 1;
     padding: 0 2vw;
     display: flex;
     flex-direction: column;
@@ -145,7 +145,7 @@ nav .menu img{
     background-color: rgba(74, 151, 254, 1);
     align-items: center;
     color: white;
-    width: 15%;
+    width: 10%;
     border: none;
     border-radius: 8px;
     font-weight: 500;

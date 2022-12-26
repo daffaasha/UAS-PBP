@@ -28,7 +28,6 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
       </div>
       <div class="menu">
         <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-        <a href="profile.php"><img src="img/user-white.svg" alt="setting" width="75%"></a>
     </nav>
   </header>
 
@@ -55,64 +54,6 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <?php endforeach; ?>
         </div>
       </div>
-    </div>
-    <div class="price-side">
-      <div class="cart-cont">
-        <div class="cart-col-header">
-          <div class="cart-name">
-            <h3 class="name-header">Product Name</h3>
-          </div>
-          <div class="cart-quantity">
-            <h3 class="quantity-header">Quantity</h3>
-          </div>
-          <div class="cart-price">
-            <h3 class="price-header">Price</h3>
-          </div>
-        </div>
-
-        <div class="cart-col">
-          <!-- <div class="cart-name">
-            <p class="name-item">Royal Canin Enak</p>
-          </div>
-          <div class="cart-quantity">
-            <div class="quantity-input">
-              <input type="number" value=1>
-            </div>
-            <input type="button" class="delete-item">
-          </div>
-          <div class="cart-price">
-            <p class="price-item">Rp. 60.000</p>
-          </div> -->
-        </div>
-      </div>
-      <div class="total-price">
-        <p class="total-text">Total</p>
-        <p class="price-final">Rp. Sekian</p>
-      </div>
-
-      <form action="">
-        <div class="process-cont">
-          <div class="paying-method">
-            <label for="gopay"><img src="img/gopay.jpeg" alt=""/></label>
-            <input type="radio" id="gopay" name="pembayaran" value="gopay" hidden required/>
-            
-            <label for="dana"><img src="img/dana.jpeg" alt=""/></label>
-            <input type="radio" id="dana" name="pembayaran" value="dana" hidden required/>
-            
-            <label for="ovo"><img src="img/ovo.png" alt=""/></label>
-            <input type="radio" id="ovo" name="pembayaran" value="ovo" hidden required/>
-            
-            <label for="shopee"><img src="img/shopeepay.jpeg" alt=""/></label>
-            <input type="radio" id="shopee" name="pembayaran" value="shopee" hidden required/>
-            
-            <label for="cash"><img src="img/cash.webp" alt=""/></label>
-            <input type="radio" id="cash" name="pembayaran" value="cash" hidden required/>
-          </div>
-          <div class="pay-btn">
-            <button class="pay-final">Finish Payment</button>
-          </div>
-        </div>
-      </form>
     </div>
   </main>
   <script src="./js/home.js"></script>
