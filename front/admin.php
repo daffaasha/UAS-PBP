@@ -32,7 +32,7 @@
 	session_start();
  
 	// cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['USERNAME']==""){
+	if($_SESSION['LEVEL']==""){
 		header("location:index.php?pesan=gagal");
 	}
  

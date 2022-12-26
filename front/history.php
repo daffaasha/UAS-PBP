@@ -1,10 +1,14 @@
 <?php
 
     include "koneksi.php";
-    $query = mysqli_query($koneksi, "SELECT * FROM `tabel_riwayat`");
-    $query1 = mysqli_query($koneksi, "SELECT * FROM `tabel_user`");
-    $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);
-    $user = mysqli_fetch_all($query1, MYSQLI_ASSOC); 
+
+    $query = mysqli_query($koneksi, "SELECT * FROM tabel_riwayat JOIN tabel_metode ON METODE_P = ID_METODE");
+    $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+
+    // $query = mysqli_query($koneksi, "SELECT * FROM `tabel_riwayat`");
+    // $query1 = mysqli_query($koneksi, "SELECT * FROM `tabel_user`");
+    // $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);
+    // $user = mysqli_fetch_all($query1, MYSQLI_ASSOC); 
 
 ?>
 
@@ -74,9 +78,10 @@
                     <tr>
                         <th class="first">ID</th>
                         <th>Date</th>
+                        <th>Name</th>
+                        <th>Harga</th>
                         <th>Subtotal</th>
-                        <th>Metode</th>
-                        <th class="end">Detail</th>
+                        <th class="end">Metode</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -84,13 +89,10 @@
                 <tr>
                     <td><?php echo $r["ID_RIWAYAT"]; ?></td>
                     <td><?php echo $r["TANGGAL"];?></td>
+                    <td><?php echo $r["NAMA_BARANG"]; ?></td>
+                    <td><?php echo $r["HARGA_SATUAN"];?></td>
                     <td><?php echo $r["TOTAL_HARGA"]; ?></td>
-                    <td><?php echo $r["METODE_P"];?></td>
-                    <td class="end">
-                        <a href="detailRiwayat.php?ID_RIWAYAT=<?php echo $r['ID_RIWAYAT']; ?>" >
-                        Detail
-                        </a>
-                    </td>
+                    <td class="end"><?php echo $r["NAMA_METODE"];?></td>
                 </tr>
                 <?php endforeach; ?>
                     <!-- <tr class="active-row">

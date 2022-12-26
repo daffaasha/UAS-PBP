@@ -3,7 +3,7 @@
     include "koneksi.php";
 
     $ID_RIWAYAT = $_GET['ID_RIWAYAT'];
-    $query = mysqli_query($koneksi, "SELECT * FROM `tabel_d_riwayat` WHERE RIWAYAT_ID = $ID_RIWAYAT ");
+    $query = mysqli_query($koneksi, "SELECT * FROM `tabel_riwayat` WHERE ID_RIWAYAT = $ID_RIWAYAT ");
     $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);  
 
 ?>
@@ -70,7 +70,6 @@
                 <thead>
                     <tr>
                         <th class="first">Nama Barang</th>
-                        <th>Nama Varian</th>
                         <th>Harga Satuan</th>
                         <th>Jumlah</th>
                         <th class="end" >Harga Sub Total</th>
@@ -81,7 +80,6 @@
                 <?php foreach($riwayat as $r) : ?>
                 <tr>
                     <td><?php echo $r["NAMA_BARANG"]; ?></td>
-                    <td><?php echo $r["NAMA_VARIAN"];?></td>
                     <td><?php echo $r["HARGA_SATUAN"]; ?></td>
                     <td><?php echo $r["JUMLAH"];?></td>
                     <td class="end"><?php echo $r["HARGA_S_TOTAL"];?></td>

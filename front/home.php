@@ -21,6 +21,15 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
 </head>
 
 <body>
+  <?php 
+	session_start();
+ 
+	// cek apakah yang mengakses halaman ini sudah login
+	if($_SESSION['LEVEL']==""){
+		header("location:index.php?pesan=gagal");
+	}
+ 
+	?>
   <header>
     <nav>
       <div class="logo">
@@ -41,15 +50,17 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <p class="product-title">Product</p>
         <input type="button" value="+ Add" class="btn-tambah">
       </div>
-      <div class="product-container">
-      <?php foreach($produk as $p) : ?>
+        <div class="product-container">
+        <?php foreach($produk as $p) : ?>
             <div class="product-card">
               <img src="aset/<?php echo $p['FOTO']; ?>" alt="product" class="img-product">
               <div class="product-info">
                 <p class="product-name"><?php echo $p['NAMA_BARANG']; ?></p>
                 <p class="product-price"><?php echo $p['HARGA']; ?></p>
               </div>
-              <input type="button" value="Add Product" class="product-add">
+              <a href="detailpesanan.php?ID_BARANG=<?php echo $p['ID_BARANG']; ?>" >
+                <input type="button" value="Buy Product" class="product-add">
+              </a>
             </div>
         <?php endforeach; ?>
         </div>

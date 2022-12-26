@@ -1,3 +1,28 @@
+<?php
+    include "koneksi.php";
+  	session_start();
+    
+ 
+    // cek apakah yang mengakses halaman ini sudah login
+    if($_SESSION['LEVEL']==""){
+      header("location:index.php?pesan=gagal");
+    }
+
+    $ID_BARANG = $_GET['ID_BARANG'];
+    $query = mysqli_query($koneksi, "SELECT * FROM tabel_barang WHERE ID_BARANG = $ID_BARANG");
+    $barang = mysqli_fetch_assoc($query);
+
+    $query1 = mysqli_query($koneksi, "SELECT * FROM tabel_metode");
+    $metode = mysqli_fetch_all($query1, MYSQLI_ASSOC);
+    // $username = $_SESSION['USERNAME'];
+    // $query = mysqli_query($koneksi, "SELECT * FROM tabel_user WHERE USERNAME = $username ");
+    // $user = mysqli_fetch_assoc($query);
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +52,7 @@
       <p class="profile-title">Checkout</p>
     </div>
 
-        <form action="" method="post">
+        <form action="prosesRiwayat.php" method="POST">
         <div class="profile-data">
         <div class="profile-pict-container">
           <img src="img/meong-img.jpg" alt="profile" class="profile-pict">
@@ -36,31 +61,29 @@
           <div class="form-flex">
             <p class="label">Product Name</p>
             <div class="input-form-container">
-              <input type="text" name = "username" class="input-form" value = "<?php echo $user['USERNAME']?>" readonly>
+              <input type="text" name = "nama_barang" class="input-form" value = "<?php echo $barang['NAMA_BARANG']?>" readonly>
             </div>
           </div>
           <div class="name form-flex">
             <p class="label">Product Price</p>
             <div class="input-form-container">
-              <input type="text" name = "nama" class="input-form" value = "<?php echo $user['NAMA']?>" readonly>
+              <input type="text" name = "harga" class="input-form" value = "<?php echo $barang['HARGA']?>" readonly>
             </div>
           </div>
           <div class="form-flex">
             <p class="label">Product Quantity</p>
             <div class="quantity">
-              <input type="number" name = "email" class="input-form" value = "<?php echo $user['EMAIL']?>">
+              <input type="number" name = "jumlah" class="input-form" value = "">
               <img src="img/pen.svg" alt="edit" class="edit-icon">
             </div>
           </div>
           <div class="number form-flex">
             <p class="label">Payment Method</p>
             <div class="price">
-                <select name="method" id="payment">
-                    <option value="ovo">OVO</option>
-                    <option value="gopay">Gopay</option>
-                    <option value="shopeepay">Shopeepay</option>
-                    <option value="dana">Dana</option>
-                    <option value="cash">Cash</option>
+                <select name="metode" id="payment">
+                    <?php foreach ($metode as $m) :  ?>
+                        <option value="<?= $m['ID_METODE'] ?>"> <?= $m['NAMA_METODE'] ?></option>
+                    <?php endforeach ?>
                 </select>
             </div>
           </div>
