@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link rel="shortcut icon" href="../res/meong img.jpg" type="image/x-icon" />
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/kucing.css">
 </head>
 
 <body>
@@ -44,7 +44,48 @@
       </div>
     </div>
     <div class="price-side">
+      <div class="cart-cont">
+        <div class="cart-col-header">
+          <div class="cart-name">
+            <h3 class="name-header">Product Name</h3>
+          </div>
+          <div class="cart-quantity">
+            <h3 class="quantity-header">Quantity</h3>
+          </div>
+          <div class="cart-price">
+            <h3 class="price-header">Price</h3>
+          </div>
+        </div>
 
+        <div class="cart-col">
+          <div class="cart-name">
+            <p class="name-item">Royal Canin Enak</p>
+          </div>
+          <div class="cart-quantity">
+            <div class="quantity-input">
+              <input type="number">
+            </div>
+            <button class="delete-item"><img src="img/bin.svg" alt="delete"></button>
+          </div>
+          <div class="cart-price">
+            <p class="price-item">Rp. 60.000</p>
+          </div>
+        </div>
+      </div>
+      <div class="total-price">
+        <p class="total-text">Total</p>
+        <p class="price-final">Rp. Sekian</p>
+      </div>
+      <div class="process-cont">
+        <div class="paying-method">
+          <button><img src="img/meong-img.jpg" alt="pay method"></button>
+          <button><img src="img/meong-img.jpg" alt="pay method"></button>
+          <button><img src="img/meong-img.jpg" alt="pay method"></button>
+          <button><img src="img/meong-img.jpg" alt="pay method"></button>
+        </div>
+        <div class="pay-btn"></div>
+      </div>
+      
     </div>
   </main>
 </body>
