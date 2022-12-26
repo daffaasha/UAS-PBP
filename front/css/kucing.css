@@ -348,27 +348,54 @@ input::-webkit-inner-spin-button {
 .paying-method {
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.paying-method img {
-    width: 40px;
+.paying-method label {
+    flex-basis: 20%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 
-.paying-method button {
-    flex-basis: 25%;
+.paying-method img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.paying-method label:hover {
+    cursor: pointer;
+}
+
+.paying-method label:active {
+    border: 2px solid rgba(55, 84, 123, 1);
+    border-radius: 3px;
+}
+
+.paying-method label:focus {
+    border: 2px solid rgba(55, 84, 123, 1);
+    border-radius: 3px;
 }
 
 .pay-final {
+    width: 100%;
     background-color: rgba(74, 151, 254, 1);
     border: none;
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
+    color: white;
+    font: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    margin-top: 10px;
+    transition: background-color 0.1s;
 }
 
-
-
-
-
+.pay-final:hover {
+    background-color: rgb(49, 98, 161);
+    cursor: pointer;
+}
