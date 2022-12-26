@@ -27,7 +27,7 @@ const addToChart = () => {
             </div>
             <div class="cart-quantity">
               <div class="quantity-input">
-                <input type="number">
+                <input type="number" value=1>
               </div>
               <button class="delete-item"><img src="img/bin.svg" alt="delete"></button>
             </div>
