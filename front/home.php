@@ -42,7 +42,7 @@
           <input type="button" value="Add Product" class="product-add">
         </div>
         <div class="product-card">
-          <img src="img/meong-img.jpg" alt="product" class="img-product">
+          <img src="img/cat.webp" alt="product" class="img-product">
           <div class="product-info">
             <p class="product-name">Ini Nama Product</p>
             <p class="product-price">60.000</p>
