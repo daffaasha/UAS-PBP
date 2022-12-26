@@ -36,24 +36,24 @@
         <div class="product-card">
           <img src="img/meong-img.jpg" alt="product" class="img-product">
           <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
+            <p class="product-name">Kucing</p>
+            <p class="product-price">600</p>
           </div>
           <input type="button" value="Add Product" class="product-add">
         </div>
         <div class="product-card">
           <img src="img/cat.webp" alt="product" class="img-product">
           <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
+            <p class="product-name">Anjing</p>
+            <p class="product-price">10.000</p>
           </div>
           <input type="button" value="Add Product" class="product-add">
         </div>
         <div class="product-card">
           <img src="img/meong-img.jpg" alt="product" class="img-product">
           <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
+            <p class="product-name">Japran</p>
+            <p class="product-price">0</p>
           </div>
           <input type="button" value="Add Product" class="product-add">
         </div>
