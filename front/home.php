@@ -81,7 +81,7 @@
             <div class="quantity-input">
               <input type="number" value=1>
             </div>
-            <button class="delete-item"><img src="img/bin.svg" alt="delete"></button>
+            <input type="button" class="delete-item">
           </div>
           <div class="cart-price">
             <p class="price-item">Rp. 60.000</p>
