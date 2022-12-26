@@ -79,7 +79,7 @@
           </div>
           <div class="cart-quantity">
             <div class="quantity-input">
-              <input type="number">
+              <input type="number" value=1>
             </div>
             <button class="delete-item"><img src="img/bin.svg" alt="delete"></button>
           </div>
@@ -92,16 +92,30 @@
         <p class="total-text">Total</p>
         <p class="price-final">Rp. Sekian</p>
       </div>
-      <div class="process-cont">
-        <div class="paying-method">
-          <button><img src="img/meong-img.jpg" alt="pay method"></button>
-          <button><img src="img/meong-img.jpg" alt="pay method"></button>
-          <button><img src="img/meong-img.jpg" alt="pay method"></button>
-          <button><img src="img/meong-img.jpg" alt="pay method"></button>
+
+      <form action="">
+        <div class="process-cont">
+          <div class="paying-method">
+            <label for="gopay"><img src="img/gopay.jpeg" alt=""/></label>
+            <input type="radio" id="gopay" name="pembayaran" value="gopay" hidden required/>
+            
+            <label for="dana"><img src="img/dana.jpeg" alt=""/></label>
+            <input type="radio" id="dana" name="pembayaran" value="dana" hidden required/>
+            
+            <label for="ovo"><img src="img/ovo.png" alt=""/></label>
+            <input type="radio" id="ovo" name="pembayaran" value="ovo" hidden required/>
+            
+            <label for="shopee"><img src="img/shopeepay.jpeg" alt=""/></label>
+            <input type="radio" id="shopee" name="pembayaran" value="shopee" hidden required/>
+            
+            <label for="cash"><img src="img/cash.webp" alt=""/></label>
+            <input type="radio" id="cash" name="pembayaran" value="cash" hidden required/>
+          </div>
+          <div class="pay-btn">
+            <button class="pay-final">Finish Payment</button>
+          </div>
         </div>
-        <div class="pay-btn"></div>
-      </div>
-      
+      </form>
     </div>
   </main>
   <script src="./js/home.js"></script>
