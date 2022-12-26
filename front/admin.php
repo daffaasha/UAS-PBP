@@ -44,8 +44,7 @@
                 <img src="img/petstar.png" alt="" width="50%">
             </div>
             <div class="menu">
-                <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="profile.php"><img src="img/user-white.svg" alt="setting" width="75%"></a>
+                <a href="logout.php"><img src="img/logout-icon.svg" alt="setting" width="75%"></a>
             </div>    
                 <!-- <ul class="dropdown">
                     <li><a href="#">Log Out</a></li>
@@ -59,7 +58,7 @@
         </div> -->
         <div class="container">
             <h1>DATA USER</h1>
-            <a href="tambahUser.php"><i class="add"></i>+ Tambah User</a>
+            <a href="tambahUser.php" class="add"><i class="add"></i>+ Tambah User</a>
             <table class="content-table">
                 <thead>
                     <tr>
@@ -75,7 +74,7 @@
                 <tbody>
                 <?php foreach($admin as $a) : ?>
                 <tr>
-                    <td><?php echo $a["ID_USER"]; ?></td>
+                    <td class="first" ><?php echo $a["ID_USER"]; ?></td>
                     <td><?php echo $a["NAMA"];?></td>
                     <td><?php echo $a["USERNAME"]; ?></td>
                     <td><?php echo $a["PASSWORD"];?></td>

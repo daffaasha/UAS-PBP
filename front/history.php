@@ -2,7 +2,6 @@
 
     include "koneksi.php";
     session_start();
-    
  
     // cek apakah yang mengakses halaman ini sudah login
     if($_SESSION['LEVEL']==""){
@@ -11,12 +10,6 @@
 
     $query = mysqli_query($koneksi, "SELECT * FROM tabel_riwayat JOIN tabel_metode ON METODE_P = ID_METODE");
     $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);  
-
-    // $query = mysqli_query($koneksi, "SELECT * FROM `tabel_riwayat`");
-    // $query1 = mysqli_query($koneksi, "SELECT * FROM `tabel_user`");
-    // $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);
-    // $user = mysqli_fetch_all($query1, MYSQLI_ASSOC); 
-
 ?>
 
 
@@ -45,17 +38,13 @@
     <header>
         <nav>
             <div class="logo">
-                <!-- <img src="img/logo.png" alt="" class="logo-kotak" width="25%"> -->
-                <img src="img/petstar.png" alt="" width="50%">
+            <a href="home.php" rel="noopener noreferrer"><img src="img/petstar.png" alt="" width="50%"></a>
             </div>
             <div class="menu">
                 <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="profile.php">
-                <img src="img/user-white.svg" alt="setting" width="75%" >
+                <a href="logout.php">
+                <img src="img/logout-icon.svg" alt="setting" width="75%" >
                 </a>
-                <!-- <ul class="dropdown">
-                    <li><a href="#">Log Out</a></li>
-                </ul> -->
         </nav>
     </header>
     <main>
@@ -81,7 +70,7 @@
                 <tbody>
                 <?php foreach($riwayat as $r) : ?>
                 <tr>
-                    <td><?php echo $r["ID_RIWAYAT"]; ?></td>
+                    <td class="first"><?php echo $r["ID_RIWAYAT"]; ?></td>
                     <td><?php echo $r["TANGGAL"];?></td>
                     <td><?php echo $r["NAMA_BARANG"]; ?></td>
                     <td><?php echo $r["HARGA_SATUAN"];?></td>

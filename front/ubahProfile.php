@@ -35,8 +35,7 @@
         <a href="home.php" target="_blank" rel="noopener noreferrer"><img src="img/petstar.png" alt="" width="50%"></a>
       </div>
       <div class="menu">
-        <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-        <a href="profile.php"><img src="img/user-white.svg" alt="setting" width="75%"></a>
+        <a href="logout.php"><img src="img/logout-icon.svg" alt="setting" width="75%"></a>
     </nav>
   </header>
 
@@ -51,9 +50,9 @@
     <form action="prosesubahProfile.php" method="POST">
       <input type="hidden" name = "id_user" value = "<?php echo $user['ID_USER']?>">
       <div class="profile-data">
-        <div class="profile-pict-container">
+        <!-- <div class="profile-pict-container">
           <img src="./aset/<?php echo $user['FOTO']; ?>" alt="profile" class="profile-pict">
-        </div>
+        </div> -->
         <div class="profile-form">
           <div class="form-flex">
             <p class="label">Username</p>

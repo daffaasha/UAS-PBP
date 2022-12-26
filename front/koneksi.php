@@ -1,8 +1,8 @@
 <?php 
  
-$server = "localhost";
+$server = "localhost:3308";
 $user = "root";
-$pass = "";
+$pass = "root";
 $database = "pet_star";
  
 $koneksi = mysqli_connect($server, $user, $pass, $database);

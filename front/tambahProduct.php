@@ -1,29 +1,11 @@
 <?php
     include "koneksi.php";
     session_start();
-  
 
     // cek apakah yang mengakses halaman ini sudah login
     if($_SESSION['LEVEL']==""){
         header("location:index.php?pesan=gagal");
     }
-
-
-
-    // if (isset($_POST['addProduct'])) {
-
-    //     $prod_name = $_POST['produk'];
-    //     $prod_img = $_FILES['foto']['name'];
-    //     move_uploaded_file($_FILES["foto"]["tmp_name"], "../aset/" . $_FILES["foto"]["name"]);
-    //     $prod_price = $_POST['harga'];
-    
-
-    //     $postQuery = "INSERT INTO rpos_products (NAMA_BARANG, FOTO, HARGA) VALUES(?,?,?)";
-    //     $postStmt = $koneksi->prepare($postQuery);
-
-    //     $rc = $postStmt->bind_param('sss', $prod_name, $prod_img, $prod_price);
-    //     $postStmt->execute();
-    // }
 
 ?>
 
@@ -52,20 +34,18 @@
     <header>
         <nav>
             <div class="logo">
-                <!-- <img src="img/logo.png" alt="" class="logo-kotak" width="25%"> -->
-                <img src="img/petstar.png" alt="" width="50%">
+            <a href="home.php" rel="noopener noreferrer"><img src="img/petstar.png" alt="" width="50%"></a>
             </div>
             <div class="menu">
-                <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="#"><img src="img/user-white.svg" alt="setting" width="75%" ></a>
-                <!-- <ul class="dropdown">
-                    <li><a href="#">Log Out</a></li>
-                </ul> -->
+                <a href="history.php"><img src="img/history.svg" alt="nama-user" width="75%"></a>
+                <a href="logout.php"><img src="img/logout-icon.svg" alt="setting" width="30%" ></a>
         </nav>
     </header>
     <main>
         <div class="container flex-content-middle">
-            <img src="img/left-arrow.svg" alt="back" width="24px">
+        <a href="home.php" rel="noopener noreferrer">
+        <img src="img/left-arrow.svg" alt="back" width="24px">
+      </a>
             <h2>Tambah Product</h2>
         </div>
         <!-- <div class="flex-content-left"> -->

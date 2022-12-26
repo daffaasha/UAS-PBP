@@ -14,9 +14,6 @@
 
     $query1 = mysqli_query($koneksi, "SELECT * FROM tabel_metode");
     $metode = mysqli_fetch_all($query1, MYSQLI_ASSOC);
-    // $username = $_SESSION['USERNAME'];
-    // $query = mysqli_query($koneksi, "SELECT * FROM tabel_user WHERE USERNAME = $username ");
-    // $user = mysqli_fetch_assoc($query);
 
 ?>
 
@@ -30,23 +27,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Detail</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/detailpesanan.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="home.php" target="_blank" rel="noopener noreferrer"><img src="img/petstar.png" alt="" width="50%"></a>
+                <a href="home.php" rel="noopener noreferrer"><img src="img/petstar.png" alt="" width="50%"></a>
             </div>
             <div class="menu">
-                <a href="#"><img src="img/history.svg" alt="nama-user" width="75%"></a>
-                <a href="profile.php"><img src="img/user-white.svg" alt="setting" width="75%"></a>
+                <a href="history.php"><img src="img/history.svg" alt="nama-user" width="75%"></a>
+                <a href="logout.php"><img src="img/logout-icon.svg" alt="setting" width="75%"></a>
             </nav>
     </header>
 
     <main>
     <div class="title-container">
-      <a href="home.php" target="_blank" rel="noopener noreferrer">
+      <a href="home.php" rel="noopener noreferrer">
         <img src="img/left-arrow.svg" alt="back" width="24px">
       </a>
       <p class="profile-title">Checkout</p>
@@ -73,7 +71,7 @@
           <div class="form-flex">
             <p class="label">Product Quantity</p>
             <div class="quantity">
-              <input type="number" name = "jumlah" class="input-form" value = "">
+              <input type="number" name = "jumlah" class="input-form" value = 1>
               <img src="img/pen.svg" alt="edit" class="edit-icon">
             </div>
           </div>
