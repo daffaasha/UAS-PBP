@@ -49,7 +49,9 @@
     </header>
     <main>
         <div class="container flex-content-middle">
+            <a href="home.php">
             <img src="img/left-arrow.svg" alt="back" width="24px">
+            </a>
             <h2>Riwayat Pembelian</h2>
         </div>
         <!-- <div class="flex-content-left"> -->
@@ -85,7 +87,7 @@
                     <td><?php echo $r["TOTAL_HARGA"]; ?></td>
                     <td><?php echo $r["METODE_P"];?></td>
                     <td class="end">
-                        <a href="detail.php?ID_RIWAYAT=<?php echo $r['ID_RIWAYAT']; ?>" >
+                        <a href="detailRiwayat.php?ID_RIWAYAT=<?php echo $r['ID_RIWAYAT']; ?>" >
                         Detail
                         </a>
                     </td>
