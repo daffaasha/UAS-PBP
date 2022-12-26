@@ -48,7 +48,9 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
       </div>
       <div class="title-container">
         <p class="product-title">Product</p>
-        <input type="button" value="+ Add" class="btn-tambah">
+        <a href="tambahProduct.php">
+          <input type="button" value="+ Add" class="btn-tambah">
+        </a>
       </div>
         <div class="product-container">
         <?php foreach($produk as $p) : ?>

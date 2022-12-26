@@ -30,12 +30,13 @@
 
 <body>
     <?php 
-	session_start();
+  	session_start();
+    
  
-	// cek apakah yang mengakses halaman ini sudah login
-	if($_SESSION['USERNAME']==""){
-		header("location:index.php?pesan=gagal");
-	}
+      // cek apakah yang mengakses halaman ini sudah login
+      if($_SESSION['LEVEL']==""){
+        header("location:index.php?pesan=gagal");
+      }
  
 	?>
     <header>

@@ -1,20 +1,29 @@
 <?php
     include "koneksi.php";
+    session_start();
+  
 
-    if (isset($_POST['addProduct'])) {
+    // cek apakah yang mengakses halaman ini sudah login
+    if($_SESSION['LEVEL']==""){
+        header("location:index.php?pesan=gagal");
+    }
 
-        $prod_name = $_POST['produk'];
-        $prod_img = $_FILES['foto']['name'];
-        move_uploaded_file($_FILES["foto"]["tmp_name"], "../aset/" . $_FILES["foto"]["name"]);
-        $prod_price = $_POST['harga'];
+
+
+    // if (isset($_POST['addProduct'])) {
+
+    //     $prod_name = $_POST['produk'];
+    //     $prod_img = $_FILES['foto']['name'];
+    //     move_uploaded_file($_FILES["foto"]["tmp_name"], "../aset/" . $_FILES["foto"]["name"]);
+    //     $prod_price = $_POST['harga'];
     
 
-        $postQuery = "INSERT INTO rpos_products (NAMA_BARANG, FOTO, HARGA) VALUES(?,?,?)";
-        $postStmt = $koneksi->prepare($postQuery);
+    //     $postQuery = "INSERT INTO rpos_products (NAMA_BARANG, FOTO, HARGA) VALUES(?,?,?)";
+    //     $postStmt = $koneksi->prepare($postQuery);
 
-        $rc = $postStmt->bind_param('sss', $prod_name, $prod_img, $prod_price);
-        $postStmt->execute();
-    }
+    //     $rc = $postStmt->bind_param('sss', $prod_name, $prod_img, $prod_price);
+    //     $postStmt->execute();
+    // }
 
 ?>
 
@@ -60,7 +69,7 @@
             <h2>Tambah Product</h2>
         </div>
         <!-- <div class="flex-content-left"> -->
-        <form method="POST" class="container">
+        <form action="prosestambahProduct.php" method="POST" class="container">
             <!-- <div class="container bg-color"> -->
                 <div class="add-pr">
                     <div class="left-side">

@@ -1,6 +1,13 @@
 <?php
 
     include "koneksi.php";
+    session_start();
+    
+ 
+    // cek apakah yang mengakses halaman ini sudah login
+    if($_SESSION['LEVEL']==""){
+      header("location:index.php?pesan=gagal");
+    }
 
     $query = mysqli_query($koneksi, "SELECT * FROM tabel_riwayat JOIN tabel_metode ON METODE_P = ID_METODE");
     $riwayat = mysqli_fetch_all($query, MYSQLI_ASSOC);  
