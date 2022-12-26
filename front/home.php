@@ -55,7 +55,7 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <div class="product-container">
         <?php foreach($produk as $p) : ?>
             <div class="product-card">
-              <img src="aset/<?php echo $p['FOTO']; ?>" alt="product" class="img-product">
+              <img src="<?php echo $p['FOTO']; ?>" alt="product" class="img-product">
               <div class="product-info">
                 <p class="product-name"><?php echo $p['NAMA_BARANG']; ?></p>
                 <p class="product-price"><?php echo $p['HARGA']; ?></p>
