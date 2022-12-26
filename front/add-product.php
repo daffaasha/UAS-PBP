@@ -1,3 +1,25 @@
+<?php
+    include "koneksi.php";
+
+    if (isset($_POST['addProduct'])) {
+
+        $prod_name = $_POST['produk'];
+        $prod_img = $_FILES['foto']['name'];
+        move_uploaded_file($_FILES["foto"]["tmp_name"], "../aset/" . $_FILES["foto"]["name"]);
+        $prod_price = $_POST['harga'];
+    
+
+        $postQuery = "INSERT INTO rpos_products (NAMA_BARANG, FOTO, HARGA) VALUES(?,?,?)";
+        $postStmt = $koneksi->prepare($postQuery);
+
+        $rc = $postStmt->bind_param('sss', $prod_name, $prod_img, $prod_price);
+        $postStmt->execute();
+    }
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -40,14 +62,14 @@
             <h2>Tambah Product</h2>
         </div>
         <!-- <div class="flex-content-left"> -->
-        <form action="" method="post" class="container">
+        <form method="POST" class="container">
             <!-- <div class="container bg-color"> -->
                 <div class="add-pr">
                     <div class="left-side">
                         <img src="img/product-image.png" alt="" class="img-change">
                         <!-- <br> -->
                         <label for="image">Ubah</label>
-                        <input type="file" name="image" id="image" hidden required>
+                        <input type="file" name="foto" id="image" hidden required>
                     </div>
                     <div class="right-side">
                         <div class="inside-right-side">
@@ -57,13 +79,10 @@
                         <div class="inside-right-side">
                         <label for="harga">Harga</label><input type="text" name="harga" id="harga" required>
                         </div>
-                        <div class="inside-right-side">
-                        <label for="stok">Stok</label><input type="text" name="stok" id="stok" required>
-                        </div>
                     </div>
                 </div>
             <!-- </div> -->
-            <button type="submit" class="btn-add">Tambahkan</button>       
+            <button type="submit" name="addProduct" class="btn-add">Tambahkan</button>       
 
         </form>
     </main>

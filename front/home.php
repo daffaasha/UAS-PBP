@@ -1,3 +1,13 @@
+
+<?php
+
+include "koneksi.php";
+
+$query = mysqli_query($koneksi, "SELECT * FROM `tabel_barang`");
+$produk = mysqli_fetch_all($query, MYSQLI_ASSOC);  
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,29 +43,16 @@
         <input type="button" value="+ Add" class="btn-tambah">
       </div>
       <div class="product-container">
-        <div class="product-card">
-          <img src="img/meong-img.jpg" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
-        </div>
-        <div class="product-card">
-          <img src="img/cat.webp" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
-        </div>
-        <div class="product-card">
-          <img src="img/meong-img.jpg" alt="product" class="img-product">
-          <div class="product-info">
-            <p class="product-name">Ini Nama Product</p>
-            <p class="product-price">60.000</p>
-          </div>
-          <input type="button" value="Add Product" class="product-add">
+      <?php foreach($produk as $p) : ?>
+            <div class="product-card">
+              <img src="aset/<?php echo $p['FOTO']; ?>" alt="product" class="img-product">
+              <div class="product-info">
+                <p class="product-name"><?php echo $p['NAMA_BARANG']; ?></p>
+                <p class="product-price">Rp.<?php echo $p['HARGA']; ?></p>
+              </div>
+              <input type="button" value="Add Product" class="product-add">
+            </div>
+        <?php endforeach; ?>
         </div>
       </div>
     </div>
