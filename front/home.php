@@ -53,9 +53,12 @@ $produk = mysqli_fetch_all($query, MYSQLI_ASSOC);
         <?php foreach($produk as $p) : ?>
             <div class="product-card">
               <img src="<?php echo $p['FOTO']; ?>" alt="product" class="img-product">
+              <div class="edit-cont">
+                <a href="editProduk.php?ID_BARANG=<?php echo $p['ID_BARANG']; ?>"><img src="img/edit.svg" alt="back" width="20px"></a>
+              </div>
               <div class="product-info">
                 <p class="product-name"><?php echo $p['NAMA_BARANG']; ?></p>
-                <p class="product-price"><?php echo $p['HARGA']; ?></p>
+                <p class="product-price">Rp <?php echo $p['HARGA']; ?></p>
               </div>
               <a href="detailpesanan.php?ID_BARANG=<?php echo $p['ID_BARANG']; ?>" >
                 <input type="button" value="Buy Product" class="product-add">

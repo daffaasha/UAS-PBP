@@ -1,11 +1,16 @@
 <?php
     include "koneksi.php";
-    session_start();
-
+  	session_start();
+    
+ 
     // cek apakah yang mengakses halaman ini sudah login
     if($_SESSION['LEVEL']==""){
-        header("location:index.php?pesan=gagal");
+      header("location:index.php?pesan=gagal");
     }
+
+    $ID_BARANG = $_GET['ID_BARANG'];
+    $query = mysqli_query($koneksi, "SELECT * FROM tabel_barang WHERE ID_BARANG = $ID_BARANG");
+    $barang = mysqli_fetch_assoc($query);
 
 ?>
 
@@ -46,52 +51,42 @@
         <a href="home.php" rel="noopener noreferrer">
         <img src="img/left-arrow.svg" alt="back" width="24px">
       </a>
-            <h2>Tambah Product</h2>
+            <h2>Edit Product</h2>
         </div>
         <!-- <div class="flex-content-left"> -->
-        <form action="prosestambahProduct.php" method="POST" class="container">
+        <form action="prosesubahProduk.php" method="POST" class="container">
+        <input type="hidden" name = "id_barang" value = "<?php echo $barang['ID_BARANG']?>">
             <!-- <div class="container bg-color"> -->
                 <div class="add-pr">
                     <div class="left-side">
-                        <img src="img/product-image.png" alt="" class="img-change">
+                        <img src="<?php echo $barang['FOTO']?>" alt="" class="img-change">
                         <!-- <br> -->
-                        <input type="url" name="foto" id="image" placeholder="Input Image URL" required>
+                        <input type="text" name="foto" id="image" placeholder="Input Image URL" value = "<?php echo $barang['FOTO'] ?>">
                         <!-- <label for="image">Ubah</label>
                         <input type="file" name="foto" id="image" hidden required> -->
                     </div>
                     <div class="right-side">
                         <div class="inside-right-side">
                         <label for="produk">Nama Produk</label>
-                        <input type="text" name="produk" id="produk" required>
+                        <input type="text" name="produk" id="produk" value = "<?php echo $barang['NAMA_BARANG']?>" required>
                         </div>
                         <div class="inside-right-side">
-                        <label for="harga">Harga</label><input type="text" name="harga" id="harga" required>
+                        <label for="harga">Harga</label><input type="text" name="harga" id="harga" value = "<?php echo $barang['HARGA']?>" required>
                         </div>
                     </div>
                 </div>
             <!-- </div> -->
-            <button type="submit" name="addProduct" class="btn-add">Tambahkan</button>       
+            <button type="submit" name="addProduct" class="btn-add">Edit</button>
+            
+                   
 
         </form>
+        <a href="hapusProduk.php?ID_BARANG=<?php echo $barang['ID_BARANG'];?>" class="delete-btn">
+        <button type="submit" name="addProduct" class="red">Hapus Produk</button>
+        </a> 
+        
     </main>
     <script>
-        // const image = document.getElementById("image");
-        // const imgChange = document.querySelector(".img-change");
-        // image.addEventListener("change", function () {
-        //     const file = this.files[0];
-        //     if (file) {
-        //     const reader = new FileReader();
-        //     reader.addEventListener("load", function () {
-        //         imgChange.setAttribute("src", this.result);
-        //         imgChange.style.width = "200px";
-        //         imgChange.style.height = "200px";
-        //         imgChange.style.objectFit = "cover";
-        //         imgChange.style.objectPosition = "25% 25%";
-        //     });
-        //     reader.readAsDataURL(file);
-        //     }
-        // });
-        
         // change image using url
         const image = document.getElementById("image");
         const imgChange = document.querySelector(".img-change");

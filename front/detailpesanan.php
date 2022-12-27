@@ -53,7 +53,7 @@
         <form action="prosesRiwayat.php" method="POST">
         <div class="profile-data">
         <div class="profile-pict-container">
-          <img src="img/meong-img.jpg" alt="profile" class="profile-pict">
+          <img src="<?php echo $barang['FOTO']?>" alt="profile" class="profile-pict">
         </div>
         <div class="profile-form">
           <div class="form-flex">

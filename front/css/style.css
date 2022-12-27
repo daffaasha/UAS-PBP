@@ -198,7 +198,7 @@ main{
     border-radius: 5px;
 }
 
-.left-side input[type="url"]{
+.left-side input[type="text"], .left-side input[type="url"]{
     display: flex;
     outline: none;
     width: 100%;
@@ -222,6 +222,24 @@ main{
     border-radius: 6px;
     color: white;
     font-size: 16px;
+}
+
+.delete-btn {
+    width: 67%;
+}
+
+.red{
+    background-color: rgba(254, 74, 74, 1);
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+}
+
+.red:active{
+    background-color: rgb(254, 43, 43);
 }
 .btn-add:active{
     width: 100%;
@@ -397,4 +415,11 @@ main{
 .cetak button:active{
     background-color: rgb(47, 137, 255);
     color: white;
+}
+
+.img-change{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 25% 25%;
 }

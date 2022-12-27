@@ -224,6 +224,14 @@ nav .menu img{
     background-color: rgb(49, 98, 161);
     cursor: pointer;
 }
+
+.edit-cont {
+    background-color: rgba(248, 252, 255, 1);
+    width: 20px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 3px;
+}
 /* price side */
 .price-side {
     height: 100vh;
